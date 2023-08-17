@@ -1,0 +1,9 @@
+Hello world de la partie 8
+
+<<<<<<< Updated upstream
+Le monde est à moi hahahaha
+=======
+Je suis dans ma branche checkout !!!!
+>>>>>>> Stashed changes
+
+test
