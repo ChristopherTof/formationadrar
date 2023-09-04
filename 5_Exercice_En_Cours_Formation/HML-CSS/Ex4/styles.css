@@ -1,0 +1,33 @@
+body{
+    width:75%;
+    margin:auto;
+}
+
+a{
+    color:crimson;
+    text-decoration: none;
+}
+
+
+h1{
+    color: red;
+    font-size:60px;
+}
+
+#contenu{
+    background-color: rgba(128, 128, 128, 0.199);
+}
+
+#contenu img{
+    margin: auto;
+    display: block;
+}
+
+#t100{
+    width: 10%;
+}
+
+#contenu + div{
+    text-align: right;
+    font-size: 2vh;
+}
