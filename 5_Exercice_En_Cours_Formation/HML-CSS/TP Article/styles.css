@@ -33,5 +33,6 @@ p{
 .custom{
     color: green;
     text-align: right;
-    text-decoration: underline;
+    text-decoration: underline
+    ;
 }
