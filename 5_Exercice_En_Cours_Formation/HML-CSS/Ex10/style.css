@@ -1,0 +1,24 @@
+caption{
+    font-size: 2em;
+}
+
+table{
+    border: double 3px violet;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: solid 2px black;
+}
+
+th{
+    background-color: rgb(0, 162, 255);
+}
+
+tr:nth-child(2n+2){
+    background-color: rgba(247, 139, 139, 0.2);
+}
+
+tr:nth-child(2n+3){
+    background-color: rgba(128, 128, 128, 0.2);
+}

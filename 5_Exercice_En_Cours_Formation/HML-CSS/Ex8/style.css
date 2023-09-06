@@ -8,7 +8,7 @@ p:first-child {
   }
 
 p:nth-child(2) {
-    box-shadow: inset 10px 10px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 10px 10px 5px rgba(0, 0, 0, 0.5), 10px 10px 5px rgba(253, 1, 1, 0.5);
   }
 
  p:last-child {

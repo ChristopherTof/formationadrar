@@ -1,0 +1,18 @@
+div{
+  width: 200px;
+  height: 200px;
+  border: solid 2px black;
+  margin-bottom: 20px;
+}
+
+div:first-child {
+    background: radial-gradient(rgb(178, 178, 245), pink)
+  }
+  
+  div:last-child {
+    background: repeating-radial-gradient(circle at center,black, white 10px);
+  }
+
+  div:last-child:hover {
+    background: repeating-radial-gradient(circle at center,white, black 10px);
+  }
