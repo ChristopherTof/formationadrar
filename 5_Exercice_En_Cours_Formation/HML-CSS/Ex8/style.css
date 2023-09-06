@@ -1,0 +1,17 @@
+p {
+    width: 200px;
+    height: 200px;
+}
+
+p:first-child {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+p:nth-child(2) {
+    box-shadow: inset 10px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+
+ p:last-child {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  }
+  

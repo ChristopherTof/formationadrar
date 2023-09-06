@@ -1,0 +1,25 @@
+/* :first-child  premier enfaant
+
+:last-child dernier enfant
+
+:nth-child(un chiffre)
+
+:nth-child(odd) enfant impair
+
+:nth-child(even) enfant pair
+
+:nth-child(3n+4)  tous les 3 à partir du 4eme
+
+*/
+
+
+li:nth-child(even){
+    color: rgb(100, 100, 255);
+}
+
+ul:hover li:nth-child(even){
+    color: black;
+}
+ul:hover li:nth-child(odd){
+    color: rgb(100, 100, 255);
+}
