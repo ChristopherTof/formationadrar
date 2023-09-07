@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <img src="https://picsum.photos/800/200?random=1" alt="Baniere du site internet">
+        <h1>Hello in my World</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="carrousel.html">Gallerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="POST">
+        <fieldset>
+            <legend>Contact</legend>
+            <div>
+                <label for="nom">Nom : <span>*</span> </label>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom " minlength="2" maxlength="20" required>
+            </div>
+            <div>
+                <label for="email">Email : <span>*</span></label>
+                <input type="mail" name="email" id="email"  placeholder="Votre adresse email">
+            </div>
+            <div>
+                <label for="message">Votre message :</label>
+                <textarea name="message" id="message" cols="70" rows="10"></textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="envoiCopie" id="envoiCopie" checked>
+                <label for="envoiCopie">Envoyer une copie du message par mail</label>
+            </div>
+            <div>
+                <input type="reset" name="reset" id="reset" value="Supprimer">
+                <input type="submit" value="Envoyer le formulaire">
+            </div>
+        </fieldset>
+    </form>
+
+    <footer>
+        <ul>
+            <li><a href="http://www.supersite.org">Site 1</a></li>
+            <li><a href="http://www.jesaispasnonplus.com">Site 2</a></li>
+            <li><a href="http://www.tartampion.us">site 3</a></li>
+            <li><a href="http://www.jokjoker.org">Site 4</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

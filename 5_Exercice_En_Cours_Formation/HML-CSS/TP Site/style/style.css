@@ -1,0 +1,103 @@
+body{
+    background: radial-gradient( at top, #CCDAE0, #EDF2F4);
+    margin: 0;
+}
+header{
+    text-align: center;
+}
+
+h1{
+    color: #EF233C;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+}
+ h3{
+    color: #2B2D42;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline dotted;
+ }
+
+article{
+    border:  solid 1px black;
+}
+
+img{
+    display: block;
+    margin: auto;
+    border: solid 2px #8D99AE;
+}
+
+footer{text-align: right;}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: #D90429;
+}
+
+a:hover{
+    color: #2B2D42;
+}
+
+label{vertical-align: top;}
+
+/* PARTIE BLOG */
+span{
+    color: #D90429;}
+
+article p:last-child{
+    text-align: right;
+    font-size: 1.5em;
+}
+
+.odd{
+    border: none;
+    background-color: rgba(128, 128, 128, 0.3);
+    padding: 15px;
+}
+.even{
+    border: none;
+    background-color: rgba(0, 0, 139, 0.3);
+    padding: 15px;
+}
+
+article div {
+    width: 75%;
+    margin: auto;
+}
+
+/* PARTIE CARROUSEL */
+
+#slider{
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+div#slider figure{
+    position:relative;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+
+    animation: 10s slidy infinite;
+}
+div#slider figure img { width: 20%; 
+    height: auto; float: left; }
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+  }

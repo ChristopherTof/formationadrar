@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Les formulaires</title>
+</head>
+<body>
+    <form method="POST" action="merci.html">
+        <fieldset>
+            <legend>Formulaire contact</legend>
+            
+            <div>
+                <label for="prenom">Prenom : </label>
+                <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prénom" minlength="2" maxlength="20" required>
+            </div>
+            <div>
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" minlength="2" maxlength="20" required>
+            </div>
+            <div>
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email" placeholder="Entrez votre email" required>
+            </div>
+            <div>
+                <label for="number">Numéro : </label>
+                <input type="tel" name="number" id="number" placeholder="Ex : 01 01 01 01 01" required>
+            </div>
+            <div>
+                <label for="pass">Mot de passe : </label>
+                <input type="password" name="pass" id="pass" placeholder="p@ssw0rd" required>
+            </div>
+            <div>
+                <label for="age">Age : </label>
+                <input type="number" name="age" id="age" placeholder="Ex : 10" min="18">
+            </div>
+            
+            <div>
+                <label for="message">Laissez votre message : </label><br>
+                <textarea name="message" id="message" placeholder="Votre message ici" rows="10" cols="70"></textarea>
+            </div>
+
+            <div>
+                <label for="date">Date du commentaire : </label>
+                <input type="date" name="date" id="date">
+            </div>
+
+            <div>
+                <label for="fichier">Sélectionner votre fichier a envoyer </label>
+                <input type="file" name="fichier" id="fichier" size="2000" accept=".jpg, .png, .pdf" title="test hahaah">
+            </div>
+            
+            
+        </fieldset>
+
+        <div id="inline">
+            <fieldset>
+                <legend>Vous préférez :</legend>
+                <div>
+                    <input type="checkbox" name="html" id="html" checked><label for="html">Le HTML</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="css" id="css"><label for="css">Le CSS</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="javascript" id="javascript"><label for="javascript">Le JavaScript</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="rien" id="rien"><label for="rien">Ne rien faire</label>
+                </div>
+            
+            </fieldset>
+
+            <fieldset>
+                <legend>Vous vous levez : </legend>
+                <div>
+                    <input type="radio" name="type" value="matin">
+                    <label for="matin">Le matin </label>
+                    <br>
+                    <input type="radio" name="type" value="midi">
+                    <label for="midi">Le midi </label>
+                    <br>
+                    <input type="radio" name="type" value="soir">
+                    <label for="soir">Le soir </label>
+                    <br>
+                    <input type="radio" name="type" value="retard">
+                    <label for="retard">En retard </label>
+                </div>
+            </fieldset>
+        </div>
+
+        <fieldset>
+            <legend>Fin du formulaire</legend>
+            <select name="liste" id="liste">
+                <optgroup label="Team Pas Encore">
+                    <option value="more">J'en veux plus</option>
+                    <option value="super">C'est super</option>
+                </optgroup>
+                <optgroup label="Team Oula">
+                    <option value="marre">J'en ai marre</option>
+                    <option value="pitie">Osekour pitié!!</option>
+                </optgroup>
+            </select>
+        </fieldset>
+   
+        <input type="reset" value="Reset">
+        <button type="reset">Reset 2</button>
+        <button type="submit">Envoyer</button>
+
+
+    </form>
+
+</body>
+</html>
