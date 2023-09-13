@@ -1,0 +1,33 @@
+h1, ul{
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+#article1{
+    background-color: aqua;
+    grid-column: 1;
+    grid-row: 1 /span 3;
+
+}
+
+#article2{
+    background-color: aqua;
+    grid-column: 2 /span 2;
+    grid-row: 1 /span 2;
+}
+
+#article3{
+    background-color: aqua;
+    grid-column: 4;
+    grid-row: 1 /span 3;
+}
