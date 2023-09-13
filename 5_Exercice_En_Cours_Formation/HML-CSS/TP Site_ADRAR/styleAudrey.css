@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+}
+article {
+  text-align: left;
+  margin: 2em;
+  padding: 2em;
+}
+p {
+  text-align: justify;
+}
+h4 {
+  text-decoration: underline;
+  text-align: left;
+}
+img {
+  width: 300px;
+  height: 200px;
+}
+#ExImage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /*background-color: rgb(213, 210, 210);*/
+}
+/*#ExHtml{
+    border: solid 1px black;
+    padding:1em;
+    background-color: rgb(213, 210, 210);
+}
+#ExWeb{
+    border: solid 1px black;
+    padding:1em;
+    background-color: rgb(213, 210, 210);
+}*/
+.PlacementImg {
+  padding: 1em;
+}
