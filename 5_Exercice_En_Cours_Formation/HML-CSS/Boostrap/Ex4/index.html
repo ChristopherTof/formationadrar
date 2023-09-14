@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body>
+    <h2>Self Align</h2>
+    <div class="container">
+        <div class="row d-flex bg-light justify-content-between"  style="height: 100px;">
+            <div class="col-3 align-self-start bg-warning">1er colonne</div>
+            <div class="col-3 align-self-center bg-primary"> 2nde colonne</div>
+            <div class="col-3 align-self-end bg-primary"> 2nde colonne</div>
+        </div>
+    </div>
+
+    <h2>Justify Content</h2>
+    <div class="container card">
+        <div class="row d-flex justify-content-around">
+            <div class="col-3 bg-warning">1er colonne 1er ligne</div>
+            <div class="col-3 bg-primary"> 2nde colonne 1ere ligne</div>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="col-3 bg-warning">1er colonne 2eme ligne</div>
+            <div class="col-3 bg-primary"> 2nde colonne 2eme ligne</div>
+        </div>
+    </div>
+
+    <h2>Exercice</h2>
+    <div class="container card text-center">
+        <div class="row d-flex">
+            <div class="col-4 bg-warning">1er colonne 1er ligne</div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-4 bg-warning">1er colonne 1er ligne</div>
+        </div>
+        <div class="row d-flex justify-content-end">
+            <div class="col-4 bg-warning">1er colonne 2eme ligne</div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>
