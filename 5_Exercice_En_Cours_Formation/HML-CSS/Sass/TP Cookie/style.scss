@@ -1,0 +1,71 @@
+*{margin: 0;}
+
+/*Variables*/
+$fond: rgba(210, 105, 30, 0.548);
+
+/* Styles*/
+body{
+    background-color: $fond;
+}
+#main{
+    position: relative;
+    background-image:url(img/chocolate.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 1.5em;
+    
+    h1{
+        font-size: 3em;
+        color: white;
+        text-align: center;
+    }
+    h2{
+        color: white;
+        text-align: center;
+    } 
+    .image{
+        margin-top: 50px;
+        position: relative;
+        z-index: -2;
+        width: 100%;
+        text-align: center;
+        
+    }
+    img{
+        width: 40%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius:30px;
+    }
+
+    .container{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .ingredient{
+            width: 25%;
+            border: dotted 2px chocolate;
+            
+            ul{
+                list-style: none;
+            }
+            li:nth-child(odd){
+                color: brown;
+            }
+    }
+    .prepa{
+        width: 35%;
+        border: dotted 2px chocolate;
+
+        li:nth-child(2n+2){
+            color: brown;
+        }
+    }
+
+    p{
+        margin: 30px 0px;
+        text-align: center;
+    }
+
+}
