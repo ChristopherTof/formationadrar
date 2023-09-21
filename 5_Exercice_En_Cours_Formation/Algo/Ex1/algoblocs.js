@@ -1,4 +1,3 @@
-
 /*//A1
 //Initialisation
 
@@ -700,7 +699,7 @@ for (let i=0; i<3; i++){
 forward(100);
 }
 */
-
+/*
 //C2
 //Init
 setPos(250,500);
@@ -719,4 +718,186 @@ for(let i=0; i<5; i++){
     forward(100);
     down();
 }
+*/
+/*
+//C3
+//Init
+setPos(50, 350);
+setLineWidth(10);
+faceRight();
+shiftColor(0.1);
+//Real
 
+for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 8; i++) {
+    forward(100);
+    left(135);
+  }
+  up();
+  forward(200);
+  down();
+  shiftColor(0.2);
+}
+*/
+/*
+//C4
+//Init
+setPos(50, 300);
+setLineWidth(10);
+faceRight();
+changeColor(color.red);
+//Real
+for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 3; i++) {
+    forward(50);
+    left(120);
+  }
+  changeColor(color.yellow);
+  for (let i = 0; i < 4; i++) {
+    forward(50);
+    right(90);
+  }
+
+  up();
+  forward(100);
+  down();
+  changeColor(color.red);
+}
+*/
+/*
+//C5
+//init
+setPos(300, 300);
+setLineWidth(10);
+faceRight();
+shiftColor(0.15);
+//Real
+for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 8; i++) {
+    forward(200);
+    left(135);
+  }
+  left(90);
+  shiftColor(25);
+}
+*/
+/*
+//C6
+//Init
+setPos(300, 500);
+setLineWidth(10);
+changeColor(color.yellow);
+faceRight();
+
+for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 5; i++) {
+    forward(200);
+    left(120);
+  }
+  right(120);
+}
+*/
+/*
+//C7
+//Init
+setPos(300, 400);
+setLineWidth(10);
+faceRight();
+changeColor(color.yellow);
+//Real
+
+for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 3; i++) {
+    forward(50);
+    right(120);
+  }
+  forward(50);
+  left(45);
+}
+*/
+/*
+//C8
+//inti
+setPos(300, 550);
+setLineWidth(10);
+faceUp();
+changeColor(color.green);
+//Real
+forward(200);
+right(45);
+for (let i = 0; i < 4; i++) {
+  changeColor(color.red);
+  for (let i = 0; i < 3; i++) {
+    forward(100);
+    right(120);
+  }
+  changeColor(color.yellow);
+  forward(100);
+  left(90);
+}
+*/
+/*
+//C9
+//Init
+setPos(500, 400);
+setLineWidth(10);
+faceRight();
+changeColor(color.green);
+//REal
+
+for (let i = 0; i < 3; i++) {
+  left(120);
+  forward(300);
+  for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
+      right(90);
+      forward(50);
+    }
+    forward(50);
+    left(120);
+  }
+}
+*/
+/* 
+//C10
+//Init
+setPos(300, 50);
+setLineWidth(10);
+faceDown();
+changeColor(color.red);
+//REal
+for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 4; i++) {
+    forward(50);
+    for (let i = 0; i < 4; i++) {
+      left(90);
+      forward(25);
+    }
+    right(90);
+  }
+  forward(100);
+}
+*/
+//c11
+//init
+setPos(200, 200);
+setLineWidth(10);
+shiftColor(0.1);
+faceRight();
+//Real
+
+for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 3; i++) {
+      forward(50);
+      left(120);
+    }
+    forward(50);
+    left(60);
+  }
+  up();
+  forward(100);
+  right(60);
+  down();
+  shiftColor(0.1);
+}
