@@ -878,6 +878,7 @@ for (let i = 0; i < 4; i++) {
   forward(100);
 }
 */
+/*
 //c11
 //init
 setPos(200, 200);
@@ -900,4 +901,264 @@ for (let i = 0; i < 6; i++) {
   right(60);
   down();
   shiftColor(0.1);
+}
+*/
+
+// //C12
+// //Init
+// setPos(300, 200);
+// setLineWidth(10);
+// changeColor(color.yellow);
+// faceRight();
+// //Real)
+// for (let i = 0; i < 4; i++) {
+//   arcLeft(50, 90);
+//   forward(50);
+//   left(90);
+//   arcLeft(50, 90);
+//   forward(50);
+//   left(90);
+//   arcRight(50, 45);
+// }
+// changeColor(color.aqua);
+// arcRight(50, 180);
+// left(120);
+// arcLeft(100, 300);
+
+//////////////////////////////////////////////////SERIE D
+
+// //D1
+// //
+// setPos(200, 150);
+// setLineWidth(10);
+// faceRight();
+// changeColor(color.red);
+// //Real
+
+// for (let i = 0; i < 8; i++) {
+//   forward(100);
+//   right(45);
+// }
+
+// //D2
+// //Init
+// setPos(150, 300);
+// setLineWidth(10);
+// faceRight();
+// changeColor(color.aqua);
+// //Real
+// forward(100);
+// right(90);
+// forward(150);
+// left(90);
+// forward(200);
+// left(90);
+// forward(75);
+// left(90);
+// forward(150);
+
+// //D3
+// //Init
+// setPos(300, 300);
+// setLineWidth(10);
+// faceRight();
+// changeColor(color.fuchsia);
+// //Real
+// forward(100);
+// right(135);
+// forward(150);
+// left(135);
+// forward(100);
+
+// //D3
+// //Init
+// setPos(100, 550);
+// setLineWidth(10);
+// changeColor(color.fuchsia);
+// //Real
+// for (let i = 0; i < 6; i++) {
+//   faceUp();
+//   forward(50);
+//   left(90);
+//   forward(50);
+//   right(90);
+//   forward(25);
+//   right(90);
+//   forward(100);
+// }
+
+// //D4
+// //Init
+// setPos(300, 300);
+// setLineWidth(10);
+// faceDown();
+// changeColor(color.red);
+// //Real
+// for (let i = 0; i < 2; i++) {
+//   forward(200);
+//   left(90);
+//   forward(50);
+//   left(90);
+// }
+// faceUp();
+// changeColor(color.yellow);
+// for (let i = 0; i < 4; i++) {
+//   forward(50);
+//   right(90);
+// }
+
+// //D5
+// //Init
+// setPos(200, 200);
+// setLineWidth(10);
+// faceRight();
+// changeColor(color.aqua);
+// //Real
+// let lg = 100;
+// forward(lg);
+// right(90);
+// lg = 150;
+// forward(lg);
+// left(90);
+// lg = 200;
+// forward(lg);
+
+// //D6
+// //Init
+// setPos(300, 300);
+// setLineWidth(10);
+// faceUp();
+// //Real
+// let lg = 75;
+// forward(lg);
+// right(90);
+// forward(lg);
+// left(90);
+// lg = 100;
+// forward(lg);
+// left(90);
+// forward(lg);
+// left(90);
+// lg = 50;
+// forward(lg);
+
+// //D7
+// //Init
+// setPos(200, 200);
+// setLineWidth(10);
+// faceRight();
+// //Real
+// let lg = 200;
+// for (let i = 0; i < 2; i++) {
+//   forward(lg);
+//   right(90);
+// }
+// lg = 100;
+// for (let i = 0; i < 2; i++) {
+//   forward(lg);
+//   right(90);
+//   forward(lg);
+//   left(90);
+// }
+
+// //D8
+// //Init
+// setPos(300, 200);
+// setLineWidth(10);
+// faceRight();
+// //Real
+// let lg = 75;
+
+// for (let i = 0; i < 6; i++) {
+//   forward(lg);
+//   right(120);
+//   lg += 75;
+// }
+
+// //D9
+// //Init
+// setPos(300, 200);
+// setLineWidth(10);
+// faceRight();
+// //Real
+// let lg = 75;
+
+// for (let i = 0; i < 10; i++) {
+//   forward(lg);
+//   right(90);
+//   lg += 15;
+// }
+
+// //D10
+// //Init
+// setPos(50, 300);
+// setLineWidth(10);
+// faceRight();
+// //Real
+
+// let lg = 150;
+// for (let i = 0; i < 5; i++) {
+//   for (let i = 0; i < 4; i++) {
+//     forward(lg);
+//     left(120);
+//   }
+//   lg -= 30;
+//   right(120);
+// }
+
+// //D10
+// //Init
+// setPos(300, 300);
+// setLineWidth(10);
+// faceRight();
+// shiftColor(0.1);
+// //Real
+// let lg = 100;
+// for (let i = 0; i < 6; i++) {
+//   for (let i = 0; i < 3; i++) {
+//     forward(lg);
+//     left(120);
+//   }
+//   forward(lg);
+//   left(60);
+//   lg += 25;
+//   shiftColor(0.1);
+// }
+
+// //D11
+// //Init
+// setPos(300, 300);
+// setLineWidth(10);
+// faceRight();
+// shiftColor(Math.random() * 0.4);
+// //Real
+
+// let rayon = 50;
+// for (let i = 0; i < 8; i++) {
+//   arcRight(rayon, 180);
+//   up();
+//   forward(50);
+//   down();
+//   rayon += 25;
+// }
+
+//D11
+//Init
+setPos(50, 300);
+setLineWidth(10);
+faceRight();
+shiftColor(Math.random() * 0.4);
+//Real
+
+for (let i = 0; i < 2; i++) {
+  let lg = 100;
+  right(45);
+  for (let i = 0; i < 4; i++) {
+    forward(lg);
+    left(90);
+    forward(lg);
+    right(90);
+    lg -= 25;
+  }
+  left(225);
 }
