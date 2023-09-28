@@ -1142,23 +1142,43 @@ for (let i = 0; i < 6; i++) {
 //   rayon += 25;
 // }
 
-//D11
-//Init
-setPos(50, 300);
-setLineWidth(10);
-faceRight();
-shiftColor(Math.random() * 0.4);
-//Real
+// //D14
+// //Init
+// setPos(50, 300);
+// setLineWidth(10);
+// faceRight();
+// shiftColor(Math.random() * 0.4);
+// //Real
 
-for (let i = 0; i < 2; i++) {
-  let lg = 100;
-  right(45);
-  for (let i = 0; i < 4; i++) {
-    forward(lg);
-    left(90);
-    forward(lg);
-    right(90);
-    lg -= 25;
-  }
-  left(225);
-}
+// for (let i = 0; i < 2; i++) {
+//   let lg = 100;
+//   right(45);
+//   for (let i = 0; i < 4; i++) {
+//     forward(lg);
+//     left(90);
+//     forward(lg);
+//     right(90);
+//     lg -= 25;
+//   }
+//   left(225);
+// }
+
+// //D15
+// //Init
+// setPos(300,300);
+// setLineWidth(10);
+// faceDown();
+// shiftColor(Math.random()*0.7);
+
+// //Real
+
+// let long = 50;
+// let radius = 90;
+
+// for (let i=0; i<10; i++){
+//   forward(long);
+//   left(radius);
+//   long += 50;
+//   radius += 1;
+// }
+
