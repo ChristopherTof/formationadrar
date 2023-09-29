@@ -1,0 +1,20 @@
+Finir Zoning	page Forum			✔️
+		page Login			✔️
+		page inscription		✔️
+		page compte			✔️
+		page message			✔️
+
+Finir maquettage	page Forum		✔️	
+			page Login		✔️
+			page inscription	✔️
+			page compte		✔️
+			page message		✔️
+
+	
+Finir Mockup	page chiffres
+		page Forum 
+		page Login
+		page inscription
+		page compte
+		page message
+
