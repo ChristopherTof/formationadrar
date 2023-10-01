@@ -11,10 +11,10 @@ Finir maquettage	page Forum		✔️
 			page message		✔️
 
 	
-Finir Mockup	page chiffres
-		page Forum 
-		page Login
-		page inscription
-		page compte
-		page message
+Finir Mockup	page chiffres			✔️ 
+		page Forum 			✔️
+		page Login			✔️
+		page inscription		✔️
+		page compte			✔️
+		page message			✔️
 
