@@ -3,12 +3,12 @@
 - le triple du nombre + 1 si le nombre est impair
 - la moitié du nombre sinon
 */
-function syracuse(a){
-    if( a%2 == 1){
-        return (a*3)+1;
-    }else{
-        return a/2;
-    }
+function syracuse(a) {
+  if (a % 2 == 1) {
+    return a * 3 + 1;
+  } else {
+    return a / 2;
+  }
 }
 console.log(syracuse(25));
 /*
@@ -19,10 +19,10 @@ Par exemple, l'appel à `countDown(3)` devra afficher
 1
 0
 */
-function countdown(a){
-    for (let i=a; i>=0; i--){
-        console.log(i);
-    }
+function countdown(a) {
+  for (let i = a; i >= 0; i--) {
+    console.log(i);
+  }
 }
 countdown(3);
 /*
@@ -34,11 +34,11 @@ Par exemple, l'appel à `fastCountDown(3)` devra afficher
 0.375
 0.1875
 */
-function fastCountdown(a){
-    while(a >= 0.1){
-        console.log(a);
-        a = a/2;
-    }
+function fastCountdown(a) {
+  while (a >= 0.1) {
+    console.log(a);
+    a = a / 2;
+  }
 }
 fastCountdown(3);
 /*
@@ -49,16 +49,16 @@ Par exemple, l'appel à `evenNumbers(5,14)` devra afficher
 10
 12
 */
-const evenNumbers = (a,b)=>{
-    for (let i=a; i<b; i++){
-     if (i%2 == 0){
-        console.log(i);
-     }
+const evenNumbers = (a, b) => {
+  for (let i = a; i < b; i++) {
+    if (i % 2 == 0) {
+      console.log(i);
     }
-}
-evenNumbers(5,14);
+  }
+};
+evenNumbers(5, 14);
 
- /*
+/*
 Sur la page wikipedia du PGCD (pas besoin de savoir ce que c'est), on peut trouver l'algorithme récursif suivant :
 ```
 fonction euclide(a, b)
@@ -67,14 +67,13 @@ fonction euclide(a, b)
 ```
 Écrire cette fonction.
 */
-const euclide = (a,b) =>{
-    if (b == 0){
-        return a;
-    } else {
-        return euclide(b, a%b)
-    }
-}
-
+const euclide = (a, b) => {
+  if (b == 0) {
+    return a;
+  } else {
+    return euclide(b, a % b);
+  }
+};
 
 /*
 À la main, calculer `euclide(6,10)`.
