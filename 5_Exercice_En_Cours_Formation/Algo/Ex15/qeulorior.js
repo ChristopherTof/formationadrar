@@ -32,5 +32,5 @@ function readTheMessage(mess) {
 }
 
 
-
+//on lance le message
 readTheMessage(message);;
