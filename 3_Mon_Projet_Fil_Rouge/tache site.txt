@@ -18,3 +18,14 @@ Finir Mockup	page chiffres			✔️
 		page compte			✔️
 		page message			✔️
 
+___________________________________________________
+Conception site
+
+Pour le blog :
+
+Regarder la class breadcrumb 
+Regarder la class Pagination (&laquo; et &raquo; flèche gauche et droite)
+
+Voir bouton switch
+
+Check bootstrap LinkedIn 09_07 pour le canvas
