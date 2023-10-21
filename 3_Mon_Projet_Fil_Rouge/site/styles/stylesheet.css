@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
+
+/* font-family: 'Pacifico', cursive; */
 .navbar {
-  height: 100px;
+  height: 130px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
+#navCanvas,
 footer {
   background-color: #358c83;
+  color: #ffffff;
+}
+
+section {
+  height: 400px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
 }
