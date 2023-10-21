@@ -54,3 +54,42 @@ function lancerDeBanque() {
 }
 
 jeuDuGo();
+
+//////////////////CORRECTION
+
+// let scoreJoueur = 0;
+// let scoreBanque = 0;
+// //boucle pour lancer les 5 tours
+// for (let i = 0; i < 5; i++) {
+//   //lancé de la banque
+//   const lanceBanque = numberRandom(6);
+//   //lancé du joueur
+//   const lanceJoueur = numberRandom(6);
+//   //test si le joueur à un score plus bas que la banque
+//   if (lanceJoueur < lanceBanque) {
+//     scoreBanque++;
+//   }
+//   //test si le joueur à le même score que la banque
+//   if (lanceJoueur == lanceBanque) {
+//     scoreJoueur += 2;
+//   }
+//   //test si le joueur à un score plus élevé que la banque
+//   if (lanceJoueur > lanceBanque) {
+//     scoreJoueur++;
+//   }
+// }
+// //cas si le joueur à un score plus grand que celui de la banque
+// if (scoreJoueur > scoreBanque) {
+//   alert("Le joueur à gagné avec : " + scoreJoueur + " pts");
+// }
+// //cas si le joueur fais le même score que celui de la banque
+// if (scoreJoueur == scoreBanque) {
+//   alert("Egalité avec un score de :" + scoreJoueur + "pts");
+// }
+// //cas ou le joueur à un score plus petit quecelui la banque
+// if (scoreJoueur < scoreBanque) {
+//   alert("La banque à gagné avec : " + scoreJoueur + " pts");
+// }
+// function numberRandom(nbr) {
+//   return Math.floor(Math.random() * nbr + 1);
+// }
