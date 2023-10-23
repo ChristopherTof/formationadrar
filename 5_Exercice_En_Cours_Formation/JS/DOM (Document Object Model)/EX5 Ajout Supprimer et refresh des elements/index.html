@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 3 - Manipulation du DOM</title>
+    <script src="js/script.js" async></script>
+  </head>
+  <body>
+    <h1>Liste des tâches</h1>
+
+    <input type="text" id="task" />
+    <br />
+
+    <button type="button" id="add" onclick="addTask()">Ajouter</button>
+
+    <button type="button" id="delAllTask" onclick="delAllTask()">Supprimer</button>
+
+    <button type="button" id="reload" onclick="reload()">Recharger</button>
+
+    <div id="tasks"></div>
+  </body>
+</html>

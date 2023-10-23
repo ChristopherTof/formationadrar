@@ -20,7 +20,7 @@ section.setAttribute("id", "contenu");
 // MAJ de la section sur le HTML
 body.appendChild(section);
 
-section.textContent = "Je suis un texte ajouté en Javascript";
+//section.textContent = "Je suis un texte ajouté en Javascript";
 
 //Recupération de valeur vi html
 const nom = document.querySelector("#nom");
@@ -29,3 +29,22 @@ const prenom = document.querySelector("#prenom");
 function recup() {
   console.log(nom.value + prenom.value);
 }
+
+// Ajouter un élément via une action
+let compteur = 1;
+function ajouter() {
+  const list = document.getElementById("resultat");
+  const titre = document.createElement("h1");
+  titre.setAttribute("id", "para" + compteur++);
+  titre.textContent = "Je suis un titre afficher par le bouton ajouter";
+  list.appendChild(titre);
+}
+
+// recupérer plusieur  element
+
+const listOrdonne = document.querySelectorAll(".menu");
+console.log(listOrdonne);
+const listeOrdonneV2 = document.getElementsByClassName("menu");
+console.log(Array.from(listeOrdonneV2)); // creer un tableau temporaire d'une HTMLCollection
+
+console.log(listeOrdonneV2);

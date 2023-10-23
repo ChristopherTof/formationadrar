@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 3 - Manipulation du DOM</title>
+    <script src="js/script.js" async></script>
+  </head>
+  <body>
+    <h1>Calcul de Prix TTC</h1>
+
+    <div>
+      <input type="text" id="objet" placeholder="Type de Fruits ou Légumes" />
+      <hr />
+      <input type="text" id="prixHT" placeholder="Prix HT" />
+      <hr />
+      <input type="text" id="quantité" placeholder="Quantité" />
+      <hr />
+      <button type="button" id="btn" onclick="calcul()">Envoyer</button>
+    </div>
+
+    <div id="resultat" style="margin-top: 10px"></div>
+  </body>
+</html>

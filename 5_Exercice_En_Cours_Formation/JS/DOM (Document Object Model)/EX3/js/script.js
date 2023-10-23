@@ -24,11 +24,11 @@ function calcul() {
   let choco = [1.4, 1.3, 1.2];
   const nbrChoco = document.querySelector("#quantité").value;
   const afficheResult = document.querySelector("#resultat");
-  let champVide = document.querySelector("#quantité").value;
   let prixTotal = 0;
 
   afficheResult.style.color = "black";
-  if (!isNaN(champVide)) {
+
+  if (!isNaN(nbrChoco)) {
     if (nbrChoco.value <= 10) {
       prixTotal = nbrChoco * choco[0];
     } else if (nbrChoco > 10 && nbrChoco <= 20) {
@@ -37,7 +37,7 @@ function calcul() {
       prixTotal = 10 * choco[0] + 10 * choco[1] + (nbrChoco - 20) * 1.2;
     }
 
-    if (champVide == "") {
+    if (nbrChoco == "") {
       afficheResult.style.color = "red";
       afficheResult.textContent = "Merci de définir le nombre de Chocolatine souhaité";
       return false;
