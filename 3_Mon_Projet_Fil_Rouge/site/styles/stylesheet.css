@@ -7,14 +7,22 @@
   text-align: center;
 }
 
+.navbar-nav a {
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav a {
+    color: white;
+  }
+}
+
 #navCanvas,
 footer {
   background-color: #358c83;
   color: #ffffff;
-}
-
-section {
-  height: 400px;
 }
 
 footer a {
