@@ -48,3 +48,24 @@ const listeOrdonneV2 = document.getElementsByClassName("menu");
 console.log(Array.from(listeOrdonneV2)); // creer un tableau temporaire d'une HTMLCollection
 
 console.log(listeOrdonneV2);
+
+//LocalStorage ajout de cle
+
+localStorage.setItem("Test", "hello world"); //permet de stocker une info dans le local storage du navigateur
+console.log(localStorage.getItem("Test"));
+
+localStorage.removeItem("Test"); // va supprimer l'info grace à sa clé
+
+//LE LOCALSTORAGE
+//créer des clés
+localStorage.setItem("Test", "exemple");
+localStorage.setItem("Test2", "exemple");
+localStorage.setItem("Test3", "exemple");
+//récupérer la valeur d'une clé
+console.log(localStorage.getItem("Test"));
+//mettre une clé
+localStorage.setItem("Test", 125);
+//supprimer une clé
+localStorage.removeItem("Test");
+//supprimer toutes les clés
+localStorage.clear();

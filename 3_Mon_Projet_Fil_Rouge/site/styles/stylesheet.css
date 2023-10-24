@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap");
 
 /* font-family: 'Pacifico', cursive; */
+/* NAVIGATION - HEADER*/
 .navbar {
   height: 130px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -25,6 +26,17 @@ footer {
   color: #ffffff;
 }
 
+/*CORP SITE*/
+
+h1 {
+  color: #358c83;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* FOOTER*/
 footer a {
   text-decoration: none;
   color: #ffffff;

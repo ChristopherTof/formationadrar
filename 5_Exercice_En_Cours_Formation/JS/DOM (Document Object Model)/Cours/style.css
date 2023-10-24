@@ -1,0 +1,12 @@
+.test {
+  background-color: brown;
+}
+.test2 {
+  background-color: yellow;
+}
+
+:root {
+  --bg: red;
+  --fontFamily: "Arial";
+  --heiht: "12px";
+}
