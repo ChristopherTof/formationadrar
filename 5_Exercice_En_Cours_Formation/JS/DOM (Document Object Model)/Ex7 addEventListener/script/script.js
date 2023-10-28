@@ -22,18 +22,18 @@
 
 ///Correction
 //Récupération de résultat
-const resultat = document.querySelector("#resultat");
+const resultat = document.querySelector('#resultat');
 
 const inputs = document.querySelectorAll('input[type="text"]');
-const btn = document.querySelector("#btn");
+const btn = document.querySelector('#btn');
 
-btn.addEventListener("click", () => {
+btn.addEventListener('click', () => {
   for (let i = 0; i < inputs.length; i++) {
     // Si vide
-    if (inputs[i].value == "") {
-      inputs[i].style.backgroundColor = "rgba(255, 0, 0, 0.4)";
+    if (inputs[i].value == '') {
+      inputs[i].style.backgroundColor = 'rgba(255, 0, 0, 0.4)';
     } else {
-      inputs[i].style.backgroundColor = "rgba(0, 255, 0, 0.4)";
+      inputs[i].style.backgroundColor = 'rgba(0, 255, 0, 0.4)';
     }
     //Autre façon  de faire un if else
     // inputs[i].value==""?inputs[i].style.backgroundColor = "rgba(255, 0, 0, 0.4)" :  inputs[i].style.backgroundColor = "rgba(0, 255, 0, 0.4)"
@@ -43,11 +43,11 @@ btn.addEventListener("click", () => {
       resultat.textContent =
         "Le prix TTC de l'article : " +
         inputs[0].value +
-        " est égal à : " +
+        ' est égal à : ' +
         (parseInt(inputs[1].value) * parseFloat(inputs[2].value) * 1.2).toFixed(2) +
-        " €";
+        ' €';
     } else {
-      resultat.textContent = "Les données saisies sont érronées";
+      resultat.textContent = 'Les données saisies sont érronées';
     }
   }
 });
