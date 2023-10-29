@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
 /* font-family: 'Pacifico', cursive; */
 /* NAVIGATION - HEADER*/
 .navbar {
@@ -40,4 +44,33 @@ a {
 footer a {
   text-decoration: none;
   color: #ffffff;
+}
+
+/*
+//////////////////////////////////////////////////////Page les Chiffres/////////////////////////////////////////////
+
+*/
+#map {
+  background-color: #358c83;
+}
+
+figcaption {
+  display: flex;
+  justify-content: end;
+  margin-right: 5vw;
+  color: rgb(123, 123, 123);
+}
+
+.encadre {
+  border: 2px solid #358c83;
+  border-radius: 10px 0 20px 0;
+  padding: 1vw;
+  font-size: 1.1rem;
+}
+.encadre span {
+  color: #358c83;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
 }
