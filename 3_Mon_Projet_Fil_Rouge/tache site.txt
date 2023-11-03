@@ -29,3 +29,39 @@ Regarder la class Pagination (&laquo; et &raquo; flèche gauche et droite)
 Voir bouton switch
 
 Check bootstrap LinkedIn 09_07 pour le canvas
+
+
+_____________________________________________________
+02 et 03 Novembre
+
+Retravailler :	Use Case					✔️
+		Diagramme de séquence
+		Diagramme d'activité
+
+
+Site : 		Peaufiner les margins smartphone		✔️
+		Redimensionner les images caroussel		✔️
+		Créer le compteur à la seconde			✔️
+		Créer le compte depuis le debut d'année
+		Interagir avec le svg				✔️
+
+Support oral 	Modifier les éléments
+		Mettre la partie en anglais
+
+
+Chiffre /An
+
+Etats-Unis :	5 107 Mt
+Canada :	585 Mt
+France : 	322 Mt
+Allemange : 	703 Mt
+Russie : 	1 792 Mt
+Chine :		11 535 Mt
+
+Chiffre par Habitant
+Etats-Unis :	15,6 T
+Canada :	15,6 T
+France : 	4,8 T
+Allemange : 	8,5 T
+Russie : 	12,4T
+Chine :		8,3 T

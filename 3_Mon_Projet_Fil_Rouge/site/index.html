@@ -9,7 +9,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles/stylesheet.css" />
-  <script src="script/script.js" async></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"
     async></script>
@@ -47,7 +46,7 @@
         <hr />
         <li class="nav-item"><a href="#" class="">Forum</a></li>
         <hr />
-        <li class="nav-item"><a href="#" class="">Contact</a></li>
+        <li class="nav-item"><a href="contact.html" class="">Contact</a></li>
         <li class="nav-item d-none d-lg-block">
           <a href="#" class=""> <img src="img/login.png" alt="icone login" /></a>
         </li>
@@ -63,19 +62,27 @@
   <!-- Section du caroussel-->
   <section class="mb-5">
 
-    <div class="carousel slide carousel-fade" id="carousselIndex" data-bs-ride="carousel">
+    <div class="carousel slide" id="carousselIndex" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="4000">
-          <img src="img/caroussel1.jpg" class="d-block w-100 h-100" alt="..." />
+          <img src="img/index/caroussel1.jpg" class="d-block img-fluid" style="width: 100vw; height: 100vh;"
+            alt="..." />
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img src="img/carousel2.jpg" class="d-block w-100 h-100" alt="..." />
+          <img src="img/index/caroussel2.jpg" class="d-block img-fluid" style="width: 100vw; height: 100vh;"
+            alt="..." />
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img src="img/caroussel1.jpg" class="d-block w-100" alt="..." />
+          <img src="img/index/caroussel3.jpg" class="d-block img-fluid" style="width: 100vw; height: 100vh;"
+            alt="..." />
         </div>
         <div class="carousel-item" data-bs-interval="4000">
-          <img src="img/carousel2.jpg" class="d-block w-100 h-100" alt="..." />
+          <img src="img/index/caroussel4.jpg" class="d-block img-fluid" style="width: 100vw; height: 100vh;"
+            alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="img/index/caroussel5.jpg" class="d-block img-fluid" style="width: 100vw; height: 100vh;"
+            alt="..." />
         </div>
       </div>
     </div>
@@ -91,8 +98,8 @@
       </div>
     </article>
 
-    <article class="container">
-      <div id="test">test</div>
+    <article class="container px-4 px-lg-0">
+
       <div class="fs-5 col-12">
         <p>
           Les gaz à effet de serre (GES) ont un rôle essentiel dans la régulation du climat. Sans eux, la température
@@ -105,7 +112,7 @@
         </p>
       </div>
       <div class="col-8 offset-2 text-center mb-5">
-        <img src="img/serreEffect1.png" alt="Schema de l'effet de serre" class="img-fluid" />
+        <img src="img/index/serreEffect1.png" alt="Schema de l'effet de serre" class="img-fluid" />
       </div>
       <div class="fs-5 col-12">
         <p>
@@ -128,7 +135,7 @@
         <h1>Le réchauffement climatique, c'est quoi?</h1>
       </div>
     </article>
-    <article class="container d-flex flex-wrap fs-5">
+    <article class="container d-flex flex-wrap fs-5 px-4 px-lg-0">
       <div class="col-12">
         <h3>Il existe plusieurs solutions ...</h3>
         <p>Nulla accumsan quam id venenatis tempor. Integer eget arcu tortor. Etiam in euismod arcu. Cras eget iaculis
@@ -136,23 +143,23 @@
       </div>
 
       <div class="col-12 col-lg-5 mb-4">
-        <img src="img/bike1.png" alt="image d'un homme faisant du vélo" class="img-fluid mx-auto d-block" />
+        <img src="img/index/bike1.png" alt="image d'un homme faisant du vélo" class="img-fluid mx-auto d-block" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur tristique posuere.</p>
         <a href="#" class="btn btn-outline-success d-block" role="button">En savoir plus</a>
       </div>
       <div class="col-12 col-lg-5 mb-4 offset-lg-2">
-        <img src="img/ecoEnergie.png" alt="image représentation de l'économie d'énergie"
+        <img src="img/index/ecoEnergie.png" alt="image représentation de l'économie d'énergie"
           class="img-fluid mx-auto d-block" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur tristique posuere.</p>
         <a href="#" class="btn btn-outline-success d-block" role="button">En savoir plus</a>
       </div>
       <div class="col-12 col-lg-5 mb-4">
-        <img src="img/electricCar1.png" alt="image d'une voiture électrique" class="img-fluid mx-auto d-block" />
+        <img src="img/index/electricCar1.png" alt="image d'une voiture électrique" class="img-fluid mx-auto d-block" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur tristique posuere.</p>
         <a href="#" class="btn btn-outline-success d-block" role="button">En savoir plus</a>
       </div>
       <div class="col-12 col-lg-5 mb-4 offset-lg-2">
-        <img src="img/marche1.png" alt="image de jeune gens marchant" class="img-fluid mx-auto d-block" />
+        <img src="img/index/marche1.png" alt="image de jeune gens marchant" class="img-fluid mx-auto d-block" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur tristique posuere.</p>
         <a href="#" class="btn btn-outline-success d-block" role="button">En savoir plus</a>
       </div>
@@ -164,13 +171,13 @@
       <div class="container d-flex flex-wrap py-3">
         <div class="col-4 mt-5">
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#">Accueil</a></li>
+            <li class="nav-item mb-2"><a href="index.html">Accueil</a></li>
             <li class="nav-item mb-2"><a href="#">L'association</a></li>
-            <li class="nav-item mb-2"><a href="#">Les chiffres</a></li>
+            <li class="nav-item mb-2"><a href="leschiffres.html">Les chiffres</a></li>
             <li class="nav-item mb-2"><a href="#">Suggestion</a></li>
             <li class="nav-item mb-2"><a href="#">Liens utiles</a></li>
             <li class="nav-item mb-2"><a href="#">Forum</a></li>
-            <li class="nav-item mb-2"><a href="#">Contact</a></li>
+            <li class="nav-item mb-2"><a href="contact.html">Contact</a></li>
             <li class="nav-item mb-2"><a href="#">Se connecter</a></li>
             <li class="nav-item mb-2"><a href="#">S'inscrire</a></li>
           </ul>

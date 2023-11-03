@@ -18,12 +18,6 @@
   margin-right: 10px;
 }
 
-@media screen and (max-width: 992px) {
-  .navbar-nav a {
-    color: white;
-  }
-}
-
 #navCanvas,
 footer {
   background-color: #358c83;
@@ -48,10 +42,26 @@ footer a {
 
 /*
 //////////////////////////////////////////////////////Page les Chiffres/////////////////////////////////////////////
-
 */
 #map {
   background-color: #358c83;
+}
+
+#worldMap {
+  width: 75%;
+}
+
+#worldMap path {
+  fill: #ebe218;
+  stroke: white;
+  stroke-width: 0.5px;
+  transition: fill 0.3s;
+}
+
+#worldMap path:hover {
+  fill: #7c780f;
+  stroke: #ebe218;
+  cursor: pointer;
 }
 
 figcaption {
@@ -73,4 +83,25 @@ figcaption {
 ul {
   padding-left: 0;
   list-style: none;
+}
+
+.btn {
+  background-color: #358c83;
+  color: white;
+}
+.btn:hover {
+  background-color: white;
+  border: 1px solid #358c83;
+  color: #358c83;
+}
+
+/* //////////////////////////////////////////////////MEDIA QUERIE */
+@media screen and (max-width: 992px) {
+  .navbar-nav a {
+    color: white;
+  }
+
+  #worldMap {
+    width: 100%;
+  }
 }
