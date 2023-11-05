@@ -13,6 +13,7 @@ const tooltipStyle = window.getComputedStyle(tooltip);
 const toolW = parseInt(tooltipStyle.width);
 const toolH = parseInt(tooltipStyle.height);
 
+console.log(toolW, toolH);
 //initialisation des chiffres d'émission a la seconde par pays (valeur tonnes)
 let fr = 10.2;
 
@@ -71,7 +72,7 @@ map.addEventListener('click', (evt) => {
     tooltip.style.display = 'block';
     tooltip.style.transition = 'opacity 0.5s ease-in';
     tooltip.style.opacity = '1';
-    tooltip.style.top = mouseY - (toolH + 10) + 'px';
+    tooltip.style.top = mouseY - 210 + 'px';
     tooltip.style.left = mouseX - 60 + 'px';
   } else if (tooltip.style.display != 'none') {
     tooltip.style.display = 'none';
