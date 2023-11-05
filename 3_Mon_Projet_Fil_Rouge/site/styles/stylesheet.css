@@ -50,25 +50,44 @@ footer a {
 #worldMap {
   width: 75%;
 }
-
+/* CSS Inner SVG*/
 #worldMap path {
   fill: #ebe218;
   stroke: white;
   stroke-width: 0.5px;
   transition: fill 0.3s;
 }
-
 #worldMap path:hover {
   fill: #7c780f;
   stroke: #ebe218;
   cursor: pointer;
 }
 
-figcaption {
-  display: flex;
-  justify-content: end;
-  margin-right: 5vw;
-  color: rgb(123, 123, 123);
+.toooltip {
+  /* background-color: rgb(244, 244, 244); */
+  background-color: rgb(244, 244, 244);
+  border: 2px solid rgb(202, 202, 202);
+  width: 30vw;
+  height: 20vh;
+  border-radius: 15px;
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+}
+#arrow {
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+}
+#para #para2 {
+  font-size: 0.5em;
+}
+
+.count {
+  font-size: 2em;
+  font-weight: bolder;
+  color: #358c83;
 }
 
 .encadre {
@@ -84,7 +103,6 @@ ul {
   padding-left: 0;
   list-style: none;
 }
-
 .btn {
   background-color: #358c83;
   color: white;

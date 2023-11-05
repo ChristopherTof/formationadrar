@@ -35,14 +35,14 @@ _____________________________________________________
 02 et 03 Novembre
 
 Retravailler :	Use Case					✔️
-		Diagramme de séquence
-		Diagramme d'activité
+		Diagramme de séquence				✔️
+		Diagramme d'activité				✔️
 
 
 Site : 		Peaufiner les margins smartphone		✔️
-		Redimensionner les images caroussel		✔️
+		Redimensionner les images carrousel		✔️
 		Créer le compteur à la seconde			✔️
-		Créer le compte depuis le debut d'année
+		Créer le compte depuis le debut d'année		
 		Interagir avec le svg				✔️
 
 Support oral 	Modifier les éléments
