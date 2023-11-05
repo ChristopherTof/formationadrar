@@ -56,7 +56,7 @@ function carbonCountry(qty) {
 
   setInterval(function () {
     poid += qty / 10;
-    sTPun.textContent = parseInt(poid);
+    sTPun.textContent = `${parseInt(poid)} t`;
   }, 100);
 }
 // Affichage du tooltip à l'endroit de la souris
@@ -70,10 +70,8 @@ map.addEventListener('click', (evt) => {
 
   if (tooltip.style.display == 'none') {
     tooltip.style.display = 'block';
-    tooltip.style.transition = 'opacity 0.5s ease-in';
-    tooltip.style.opacity = '1';
-    tooltip.style.top = mouseY - 210 + 'px';
-    tooltip.style.left = mouseX - 60 + 'px';
+    tooltip.style.top = mouseY - (toolH + 10) + 'px';
+    tooltip.style.left = mouseX - 58 + 'px';
   } else if (tooltip.style.display != 'none') {
     tooltip.style.display = 'none';
   }
