@@ -81,3 +81,19 @@ map.addEventListener('click', (evt) => {
   //   setTimeout((tooltip.style.display = 'none'), 1000);
   // });
 });
+
+//Debut debut de l'année
+// let startYear = new Date(2023, 0, 1);
+// let tInstant = new Date();
+// console.log(startYear);
+// console.log(tInstant);
+
+// function getHour() {
+//   setInterval(function () {
+//     let tInstant = new Date();
+//     //console.log(tInstant);
+//     let ecoule = (tInstant.getTime() - startYear.getTime()) / 1000 / 3600 / 24;
+//     console.log(`Depuis le debut de l'année, il s'est écoulé ${ecoule} secondes `);
+//   }, 1000);
+// }
+// getHour();
