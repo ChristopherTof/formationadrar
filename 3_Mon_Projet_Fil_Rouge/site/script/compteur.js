@@ -66,6 +66,7 @@ map.addEventListener('click', (evt) => {
 
   // initialisation de la récupération du target
   let cible = evt.target.id;
+  let cible2 = evt.target;
   console.log(cible); // renvoi FR
 
   if (tooltip.style.display == 'none') {
@@ -76,10 +77,7 @@ map.addEventListener('click', (evt) => {
     tooltip.style.display = 'none';
   }
 
-  map.addEventListener('mouseleave', () => {
-    console.log(cible);
-    setTimeout(() => {
-      tooltip.style.display = 'none';
-    }, 8000);
-  });
+  // cible2.addEventListener('mouseenter', () => {
+  //   setTimeout((tooltip.style.display = 'none'), 1000);
+  // });
 });
