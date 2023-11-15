@@ -113,6 +113,18 @@ ul {
   color: #358c83;
 }
 
+/* //////////////////////////////////////////////////Page suggestions */
+
+.bg-card {
+  background-color: #358c8359;
+  border-radius: 15px;
+}
+
+.bg-border {
+  border-radius: 15px;
+  border: 1px solid #358c8359;
+}
+
 /* //////////////////////////////////////////////////MEDIA QUERIE */
 @media screen and (max-width: 992px) {
   .navbar-nav a {
