@@ -13,7 +13,6 @@ const tooltipStyle = window.getComputedStyle(tooltip);
 const toolW = parseInt(tooltipStyle.width);
 const toolH = parseInt(tooltipStyle.height);
 
-console.log(toolW, toolH);
 //initialisation des chiffres d'émission a la seconde par pays (valeur tonnes)
 let fr = 10.2;
 
@@ -34,7 +33,7 @@ function cumulUser(qty) {
   setInterval(function () {
     sTPDeux.textContent = `${kg}.${cGr}${dGr}${parseInt(gr)} Kg`;
     gr += qty;
-    console.log(gr);
+    //console.log(gr);
     if (gr >= 10) {
       dGr += 1;
       gr = gr - 10;
@@ -77,6 +76,7 @@ map.addEventListener('click', (evt) => {
     tooltip.style.display = 'none';
   }
 
+  // Test timing à la sortie de la souris
   // cible2.addEventListener('mouseenter', () => {
   //   setTimeout((tooltip.style.display = 'none'), 1000);
   // });
@@ -92,8 +92,8 @@ map.addEventListener('click', (evt) => {
 //   setInterval(function () {
 //     let tInstant = new Date();
 //     //console.log(tInstant);
-//     let ecoule = (tInstant.getTime() - startYear.getTime()) / 1000 / 3600 / 24;
-//     console.log(`Depuis le debut de l'année, il s'est écoulé ${ecoule} secondes `);
+//     let ecoule = parseInt((tInstant.getTime() - startYear.getTime()) / 1000 / 3600 / 24);
+//     console.log(`Depuis le debut de l'année, il s'est écoulé ${ecoule} Jours `);
 //   }, 1000);
 // }
 // getHour();
