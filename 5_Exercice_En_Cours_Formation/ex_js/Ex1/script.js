@@ -7,6 +7,7 @@ function calcul(nbr) {
       div = add;
     }
   }
-  return `Au bout de 10 tours la fonction calcul(567) renvoi ${add / div}`;
+  console.log(`Au bout de 10 tours la fonction calcul(1095) renvoi ${add / div}`);
 }
-console.log(calcul(567));
+
+calcul(1095);
