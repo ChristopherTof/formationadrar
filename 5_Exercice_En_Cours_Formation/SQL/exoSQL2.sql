@@ -54,3 +54,18 @@ alter table ajouter
 add constraint fk_ajouter_ticket
 foreign key (id_ticket)
 references ticket (id_ticket);
+
+insert into categorie(nom_categorie) value ('alimentaire');
+insert into categorie(nom_categorie) value ('liquide');
+insert into categorie(nom_categorie) value ('DPH');
+
+-- on peut aussi le créer en une seul ligne insert into categorie(nom_categorie) values ('alimentaire'), ('liquide'), ('DPH');
+
+describe categorie;
+select * from categorie;
+show databases;
+select * from categorie;
+
+insert into produit(nom_produit,description_produit,prix_produit,id_categorie) value ('pomme', 'sachet de pomme au kg', 9.89,1);
+
+select * from produit;

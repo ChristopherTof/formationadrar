@@ -16,3 +16,10 @@ insert into ticket(date_ticket,id_vendeur) values
 insert into ajouter (id_produit,id_ticket, quantité) values
 (2,2,1),(4,2,2),
 (1,1,2),(3,1,1);
+
+insert into produit(nom_produit,description_produit,prix_produit,id_categorie) values 
+(upper('deodorant'), 'senteur boisé',1.99, 3),
+(upper('Vin'), 'bordaux',8.54, 1);
+
+use commerce;
+
