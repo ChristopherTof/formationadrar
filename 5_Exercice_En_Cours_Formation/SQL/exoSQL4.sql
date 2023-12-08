@@ -7,8 +7,9 @@ UPDATE vendeur SET nom_vendeur = UPPER (nom_vendeur), prenom_vendeur = UPPER (pr
 -- Changer la date
 UPDATE ticket SET date_ticket = REPLACE (date_ticket, "2023-12-05", "2023/01/05");
 -- Meilleur option 
-UPDATE ticket SET date_ticket = date_add(date_ticket, interval 6 month ) WHERE MONTH(date_ticket) = 01;
+UPDATE ticket SET date_ticket = date_add(date_ticket, interval 5 month ) WHERE MONTH(date_ticket) = 07;
 -- Supprimer le vendeur ajouté plus haut
 DELETE FROM vendeur WHERE id_vendeur=3;
 
-
+use commerce;
+select * from ticket;
