@@ -14,8 +14,9 @@ SELECT nom_produit, description_produit, prix_produit, nom_categorie FROM produi
 -- Afficher la liste des tickets avec (date_ticket, nom_vendeur, prenom_vendeur),
 SELECT date_ticket, nom_vendeur, prenom_vendeur FROM ticket INNER JOIN vendeur ON ticket.id_vendeur = vendeur.id_vendeur;
 -- Afficher la liste des produits vendus sur le ticket (id_ticket = 1)  avec le nom_produit, prix_produit, quantite produit
-SELECT nom_produit, quantité, prix_produit FROM ajouter INNER JOIN produit ON ajouter.id_produit = produit.id_produit INNER JOIN ticket 
-ON ajouter.id_ticket = ticket.id_ticket WHERE ajouter.id_ticket = 1;
+SELECT nom_produit, quantité, prix_produit FROM ajouter 
+INNER JOIN produit ON ajouter.id_produit = produit.id_produit INNER JOIN ticket 
+ON ajouter.id_ticket = ticket.id_ticket  WHERE ajouter.id_ticket = 1;
 
 select * from ajouter;
 
