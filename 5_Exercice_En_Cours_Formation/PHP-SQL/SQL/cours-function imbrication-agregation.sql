@@ -15,3 +15,11 @@ INNER JOIN ticket ON ajouter.id_ticket = ticket.id_ticket
 GROUP BY ajouter.id_ticket;
 
 SELECT (quatite*prix_produit) AS prix;
+
+
+-- Afficher le ticket avec la date et les quantités vendu
+
+SELECT ajouter.id_ticket, date_ticket, GROUP_CONCAT(CONCAT('Nom : ',nom_produit,' prix : ',prix_produit)) AS Produits, GROUP_CONCAT(quantité) AS Quantité FROM ajouter
+INNER JOIN produit ON ajouter.id_produit = produit.id_produit
+INNER JOIN ticket ON ajouter.id_ticket = ticket.id_ticket
+WHERE ajouter.id_ticket = 1;
