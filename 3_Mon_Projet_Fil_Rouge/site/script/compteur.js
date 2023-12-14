@@ -83,17 +83,20 @@ map.addEventListener('click', (evt) => {
 });
 
 //Debut debut de l'année
-// let startYear = new Date(2023, 0, 1);
-// let tInstant = new Date();
-// console.log(startYear);
-// console.log(tInstant);
+let tInstant = new Date();
+let currentYear = tInstant.getFullYear();
+let startYear = new Date(currentYear, 0, 1);
+console.log(startYear);
+console.log(tInstant);
 
-// function getHour() {
-//   setInterval(function () {
-//     let tInstant = new Date();
-//     //console.log(tInstant);
-//     let ecoule = parseInt((tInstant.getTime() - startYear.getTime()) / 1000 / 3600 / 24);
-//     console.log(`Depuis le debut de l'année, il s'est écoulé ${ecoule} Jours `);
-//   }, 1000);
-// }
-// getHour();
+function getHour() {
+  setInterval(function () {
+    let tInstant = new Date();
+    //console.log(tInstant);
+    let ecoule = parseInt((tInstant.getTime() - startYear.getTime()) / 1000 / 3600 / 24);
+    //let debAn = fr * 3600 * 24 * ecoule;
+    console.log(`Depuis le debut de l'année, il s'est écoulé ${ecoule} Jours `);
+    //console.log(debAn++);
+  }, 1000);
+}
+getHour();
