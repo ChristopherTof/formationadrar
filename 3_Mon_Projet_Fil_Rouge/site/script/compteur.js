@@ -13,17 +13,41 @@ const tooltipStyle = window.getComputedStyle(tooltip);
 const toolW = parseInt(tooltipStyle.width);
 const toolH = parseInt(tooltipStyle.height);
 
-//initialisation des chiffres d'émission a la seconde par pays (valeur tonnes)
-let fr = 10.2;
+//Debut debut de l'année
+let tInstant = new Date();
+let currentYear = tInstant.getFullYear();
+let startYear = new Date(currentYear, 0, 1);
+console.log(startYear);
+console.log(tInstant);
 
-// Compteur à la seconde pour un utilisateur français (appliqué dès le chargement de la page)
-//Lancement du compteur au chargement de la page
+// //INITIALISATION DES CHIFFRES D'EMISSION
+let france = {
+  //Valeur pour le pays
+  fr: 10.2,
+  // Valeur par habitants
+  frP: 0.15,
+};
+
+let usa = {
+  //Valeur pour le pays
+  us: 102,
+  // Valeur par habitants
+  usP: 15,
+};
+
+//Lancement du compteur au chargement de la page (France)
 window.addEventListener('load', () => {
-  cumulUser(0.15);
-  carbonCountry(fr);
+  // cumulUser(france.frP);
+  cumulUser(france.frP);
+  sTPDeux.textContent = carbonCountry(france.fr);
 });
 
-//Fonction compteur information emission du User Français
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////FONCTIONS COMPTEUR
+////////////////////////////////////////////////////////////////////////////////////
+//Fonction compteur information emission du User
+//let chrono = window.setInterval(cumulUser(qty), 1000);
+
 function cumulUser(qty) {
   let gr = 0;
   let dGr = 0;
@@ -31,9 +55,7 @@ function cumulUser(qty) {
   let kg = 0;
 
   setInterval(function () {
-    sTPDeux.textContent = `${kg}.${cGr}${dGr}${parseInt(gr)} Kg`;
     gr += qty;
-    //console.log(gr);
     if (gr >= 10) {
       dGr += 1;
       gr = gr - 10;
@@ -46,6 +68,8 @@ function cumulUser(qty) {
       kg += 1;
       cGr = 0;
     }
+    result = `${kg}.${cGr}${dGr}${parseInt(gr)} Kg`;
+    sTPDeux.textContent = result;
   }, 1000);
 }
 
@@ -58,16 +82,33 @@ function carbonCountry(qty) {
     sTPun.textContent = `${parseInt(poid)} t`;
   }, 100);
 }
-// Affichage du tooltip à l'endroit de la souris
-map.addEventListener('click', (evt) => {
-  let mouseX = evt.clientX + +window.scrollX; //propriété d'un mouseEvent qui donne la coordonée horizontale de la souris par rapport à la fenetre d'affichage (soit le 0,0 de la fenetre du nav)
-  let mouseY = evt.clientY + window.scrollY; //propriété d'un mouseEvent qui donne la coordonée verticale de la souris par rapport à la fenetre d'affichage (soit le 0,0 de la fenetre du nav)
 
+//AFFICHAGE DU TOOLTIP A L'ENDROIT DE LA SOURIS
+
+map.addEventListener('click', (evt) => {
   // initialisation de la récupération du target
   let cible = evt.target.id;
   let cible2 = evt.target;
-  console.log(cible); // renvoi FR
 
+  //ACTIVATION DES FONCTIONS COMPTEUR EN FONCTION DU PAYS
+  switch (cible) {
+    case 'FR':
+      console.log('France');
+      break;
+
+    case 'US':
+      console.log('US');
+      break;
+
+    default:
+      console.log('not a good country');
+      break;
+  }
+
+  let mouseX = evt.clientX + +window.scrollX; //propriété d'un mouseEvent qui donne la coordonée horizontale de la souris par rapport à la fenetre d'affichage (soit le 0,0 de la fenetre du nav)
+  let mouseY = evt.clientY + window.scrollY; //propriété d'un mouseEvent qui donne la coordonée verticale de la souris par rapport à la fenetre d'affichage (soit le 0,0 de la fenetre du nav)
+
+  //APPARITON DE LA FENETRE DU COMPTEUR
   if (tooltip.style.display == 'none') {
     tooltip.style.display = 'block';
     tooltip.style.top = mouseY - (toolH + 10) + 'px';
@@ -75,28 +116,16 @@ map.addEventListener('click', (evt) => {
   } else if (tooltip.style.display != 'none') {
     tooltip.style.display = 'none';
   }
-
-  // Test timing à la sortie de la souris
-  // cible2.addEventListener('mouseenter', () => {
-  //   setTimeout((tooltip.style.display = 'none'), 1000);
-  // });
 });
 
-//Debut debut de l'année
-let tInstant = new Date();
-let currentYear = tInstant.getFullYear();
-let startYear = new Date(currentYear, 0, 1);
-console.log(startYear);
-console.log(tInstant);
-
-function getHour() {
-  setInterval(function () {
-    let tInstant = new Date();
-    //console.log(tInstant);
-    let ecoule = parseInt((tInstant.getTime() - startYear.getTime()) / 1000 / 3600 / 24);
-    //let debAn = fr * 3600 * 24 * ecoule;
-    console.log(`Depuis le debut de l'année, il s'est écoulé ${ecoule} Jours `);
-    //console.log(debAn++);
-  }, 1000);
-}
-getHour();
+// function getHour() {
+//   setInterval(function () {
+//     let tInstant = new Date();
+//     //console.log(tInstant);
+//     let ecoule = parseInt((tInstant.getTime() - startYear.getTime()) / 1000 / 3600 / 24);
+//     let debAn = france.fr * 3600 * 24 * ecoule;
+//     console.log(`Depuis le debut de l'année, il s'est écoulé ${ecoule} Jours `);
+//     console.log(france.fr);
+//   }, 1000);
+// }
+// getHour();
