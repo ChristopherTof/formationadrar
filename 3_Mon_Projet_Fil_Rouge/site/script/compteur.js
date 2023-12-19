@@ -36,10 +36,10 @@ let usa = {
 };
 
 //Lancement du compteur au chargement de la page (France)
-// window.addEventListener('load', () => {
-cumulUser(france.hab);
-carbonCountry(france.pays);
-// });
+window.addEventListener('load', () => {
+  cumulUser(france.hab);
+  carbonCountry(france.pays);
+});
 
 ////////LANCER EN ARRIERE PLAN LE NOMBRE DE SECONDE DEPUIS LE CHARGEMENT DE LA PAGE PUIS MULTPLIER PAR LE TAUX DE CO
 //PAR PAYS
@@ -47,8 +47,8 @@ carbonCountry(france.pays);
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////FONCTIONS COMPTEUR
 ////////////////////////////////////////////////////////////////////////////////////
-//Fonction compteur information emission du User
 
+//Fonction compteur information emission du User
 function cumulUser(qty) {
   let gr = 0;
   let dGr = 0;
@@ -73,6 +73,7 @@ function cumulUser(qty) {
     sTPDeux.textContent = result;
   }, 1000);
 }
+
 //Compteur par pays
 function carbonCountry(qty) {
   let poid = 0;
@@ -83,11 +84,9 @@ function carbonCountry(qty) {
 }
 
 //AFFICHAGE DU TOOLTIP A L'ENDROIT DE LA SOURIS
-
 map.addEventListener('click', (evt) => {
   // initialisation de la récupération du target
   let cible = evt.target.id;
-  //let cible2 = evt.target;
 
   //ACTIVATION DES FONCTIONS COMPTEUR EN FONCTION DU PAYS
   switch (cible) {
