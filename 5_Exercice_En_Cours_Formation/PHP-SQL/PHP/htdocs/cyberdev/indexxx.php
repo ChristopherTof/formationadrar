@@ -38,6 +38,8 @@ if ($user) {
 } else {
     echo "l'utilisateur n'existe pas";
 }
+
+
 //vérifier si le formulaire est submit
 if (isset($_POST["submit"])) {
     //tester si les champs sont remplis
@@ -71,6 +73,7 @@ function ajouterUtilisateurPrepareV2(string $nom, string $prenom, $bdd)
     $requete->bindParam(2, $prenom, PDO::PARAM_STR);
     $requete->execute();
 }
+
 function inject(string $nom, string $prenom, $bdd)
 {
     $bdd->query("SELECT id, nom, prenom FROM utilisateur WHERE nom = '$nom' AND '$prenom'");
