@@ -42,6 +42,9 @@ window.addEventListener('load', () => {
   sTPDeux.textContent = carbonCountry(france.fr);
 });
 
+////////LANCER EN ARRIERE PLAN LE NOMBRE DE SECONDE DEPUIS LE CHARGEMENT DE LA PAGE PUIS MULTPLIER PAR LE TAUX DE CO
+//PAR PAYS
+
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////FONCTIONS COMPTEUR
 ////////////////////////////////////////////////////////////////////////////////////
@@ -88,7 +91,7 @@ function carbonCountry(qty) {
 map.addEventListener('click', (evt) => {
   // initialisation de la récupération du target
   let cible = evt.target.id;
-  let cible2 = evt.target;
+  //let cible2 = evt.target;
 
   //ACTIVATION DES FONCTIONS COMPTEUR EN FONCTION DU PAYS
   switch (cible) {
@@ -98,6 +101,8 @@ map.addEventListener('click', (evt) => {
 
     case 'US':
       console.log('US');
+      carbonCountry(usa.us);
+      cumulUser(usa.usP);
       break;
 
     default:

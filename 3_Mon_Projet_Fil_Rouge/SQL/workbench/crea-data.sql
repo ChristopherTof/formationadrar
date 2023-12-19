@@ -14,7 +14,7 @@ CREATE TABLE users (
     email_users VARCHAR(50) NOT NULL UNIQUE,
     password_users VARCHAR(100) NOT NULL,
     date_inscription_users DATE,
-    is_moderator TINYINT(1) DEFAULT "0"
+    is_moderator TINYINT(1) DEFAULT 0
 )Engine=InnoDB;
 
 CREATE TABLE theme (
@@ -27,7 +27,7 @@ CREATE TABLE discuss (
     title_discuss VARCHAR(50) NOT NULL,
     body_discuss TEXT NOT NULL,
     date_discuss DATETIME,
-    is_hidden_discuss TINYINT(1) DEFAULT "0",
+    is_hidden_discuss TINYINT(1) DEFAULT 0,
     author INT,
     id_theme INT
 )Engine=InnoDB;
@@ -35,7 +35,7 @@ CREATE TABLE discuss (
 CREATE TABLE valid_info(
 	id_valid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     name_valid VARCHAR(50),
-    is_valid TINYINT(1) DEFAULT "1"
+    is_valid TINYINT(1) DEFAULT 1
 )Engine=InnoDB;
 
 CREATE TABLE message (
