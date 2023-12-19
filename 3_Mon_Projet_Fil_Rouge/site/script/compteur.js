@@ -23,24 +23,23 @@ console.log(tInstant);
 // //INITIALISATION DES CHIFFRES D'EMISSION
 let france = {
   //Valeur pour le pays
-  fr: 10.2,
+  pays: 10.2,
   // Valeur par habitants
-  frP: 0.15,
+  hab: 0.15,
 };
 
 let usa = {
   //Valeur pour le pays
-  us: 102,
+  pays: 102,
   // Valeur par habitants
-  usP: 15,
+  hab: 5,
 };
 
 //Lancement du compteur au chargement de la page (France)
-window.addEventListener('load', () => {
-  // cumulUser(france.frP);
-  cumulUser(france.frP);
-  sTPDeux.textContent = carbonCountry(france.fr);
-});
+// window.addEventListener('load', () => {
+cumulUser(france.hab);
+carbonCountry(france.pays);
+// });
 
 ////////LANCER EN ARRIERE PLAN LE NOMBRE DE SECONDE DEPUIS LE CHARGEMENT DE LA PAGE PUIS MULTPLIER PAR LE TAUX DE CO
 //PAR PAYS
@@ -49,7 +48,6 @@ window.addEventListener('load', () => {
 ////////////////////////////////////////////////////////FONCTIONS COMPTEUR
 ////////////////////////////////////////////////////////////////////////////////////
 //Fonction compteur information emission du User
-//let chrono = window.setInterval(cumulUser(qty), 1000);
 
 function cumulUser(qty) {
   let gr = 0;
@@ -57,7 +55,7 @@ function cumulUser(qty) {
   let cGr = 0;
   let kg = 0;
 
-  setInterval(function () {
+  return setInterval(function () {
     gr += qty;
     if (gr >= 10) {
       dGr += 1;
@@ -75,12 +73,10 @@ function cumulUser(qty) {
     sTPDeux.textContent = result;
   }, 1000);
 }
-
 //Compteur par pays
 function carbonCountry(qty) {
   let poid = 0;
-
-  setInterval(function () {
+  return setInterval(function () {
     poid += qty / 10;
     sTPun.textContent = `${parseInt(poid)} t`;
   }, 100);
@@ -96,20 +92,19 @@ map.addEventListener('click', (evt) => {
   //ACTIVATION DES FONCTIONS COMPTEUR EN FONCTION DU PAYS
   switch (cible) {
     case 'FR':
-      console.log('France');
+      //cumulUser(france.hab);
+      //carbonCountry(france.pays);
       break;
 
     case 'US':
-      console.log('US');
-      carbonCountry(usa.us);
-      cumulUser(usa.usP);
+      cumulUser(usa.hab);
+      carbonCountry(usa.pays);
       break;
 
     default:
       console.log('not a good country');
       break;
   }
-
   let mouseX = evt.clientX + +window.scrollX; //propriété d'un mouseEvent qui donne la coordonée horizontale de la souris par rapport à la fenetre d'affichage (soit le 0,0 de la fenetre du nav)
   let mouseY = evt.clientY + window.scrollY; //propriété d'un mouseEvent qui donne la coordonée verticale de la souris par rapport à la fenetre d'affichage (soit le 0,0 de la fenetre du nav)
 
@@ -122,6 +117,12 @@ map.addEventListener('click', (evt) => {
     tooltip.style.display = 'none';
   }
 });
+
+// tooltip.addEventListener('mouseout', () => {
+//   setInterval(() => {
+//     tooltip.style.display = 'none';
+//   }, 3000);
+// });
 
 // function getHour() {
 //   setInterval(function () {
