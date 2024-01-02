@@ -65,6 +65,9 @@ footer a {
   cursor: pointer;
 }
 
+#tooltip {
+  display: none;
+}
 .toooltip {
   /* background-color: rgb(244, 244, 244); */
   background-color: rgb(244, 244, 244);

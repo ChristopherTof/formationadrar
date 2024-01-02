@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utiliser setInterval avec des paramètres différents</title>
+</head>
+
+<body>
+
+    <div id="resultat"></div>
+
+    <script>
+        // Fonction qui utilise setInterval pour afficher un compteur
+        function afficherCompteur(depart, interval) {
+            var resultatDiv = document.getElementById('resultat');
+            var compteur = depart;
+
+            var intervalID = setInterval(function () {
+                resultatDiv.innerHTML = "Compteur : " + compteur;
+
+                // Incrémente le compteur
+                compteur++;
+
+                // Si vous voulez arrêter le compteur après un certain nombre d'itérations, vous pouvez ajouter une condition ici
+                // if (compteur > limite) {
+                //   clearInterval(intervalID);
+                // }
+            }, interval);
+        }
+
+        // Appeler la fonction avec différents paramètres au chargement de la page
+        window.onload = function () {
+            // Appel de la fonction avec le départ à 1 et un intervalle de 1000 ms (1 seconde)
+            afficherCompteur(1, 1000);
+
+            // Appel de la fonction avec le départ à 10 et un intervalle de 500 ms (0.5 seconde)
+            afficherCompteur(10, 500);
+
+            // Vous pouvez ajouter autant d'appels de fonction que nécessaire avec différents paramètres
+        };
+    </script>
+
+</body>
+
+</html>

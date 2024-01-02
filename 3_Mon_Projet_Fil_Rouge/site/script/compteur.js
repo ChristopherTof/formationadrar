@@ -5,8 +5,11 @@ const map = document.querySelector('#worldMap');
 const tooltip = document.querySelector('#tooltip');
 tooltip.setAttribute('class', 'toooltip');
 tooltip.style.display = 'none';
-const sTPun = document.querySelector('#para .count');
-const sTPDeux = document.querySelector('#para2 .count');
+const showResultCountry = document.querySelector('#para .count');
+const showResultPerson = document.querySelector('#para2 .count');
+
+const cardResultFrance = document.querySelector('#info .count');
+const cardResultFrancais = document.querySelector('#info2 .count');
 
 //Récupération de la valeur CSS d'un attribut (ici tooltip)
 const tooltipStyle = window.getComputedStyle(tooltip);
@@ -30,78 +33,41 @@ let france = {
 
 let usa = {
   //Valeur pour le pays
-  pays: 102,
+  pays: 15,
   // Valeur par habitants
   hab: 5,
 };
 
-//Lancement du compteur au chargement de la page (France)
+// Initialisation de la récupération de l'id du setInterval en cours
+let intervalIdCumulUser;
+let intervalIdCarbonCountry;
+
 window.addEventListener('load', () => {
-  cumulUser(france.hab);
-  carbonCountry(france.pays);
+  loopFr(france.pays, france.hab);
 });
-
-////////LANCER EN ARRIERE PLAN LE NOMBRE DE SECONDE DEPUIS LE CHARGEMENT DE LA PAGE PUIS MULTPLIER PAR LE TAUX DE CO
-//PAR PAYS
-
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////FONCTIONS COMPTEUR
-////////////////////////////////////////////////////////////////////////////////////
-
-//Fonction compteur information emission du User
-function cumulUser(qty) {
-  let gr = 0;
-  let dGr = 0;
-  let cGr = 0;
-  let kg = 0;
-
-  return setInterval(function () {
-    gr += qty;
-    if (gr >= 10) {
-      dGr += 1;
-      gr = gr - 10;
-    }
-    if (dGr > 9) {
-      cGr += 1;
-      dGr = 0;
-    }
-    if (cGr > 9) {
-      kg += 1;
-      cGr = 0;
-    }
-    result = `${kg}.${cGr}${dGr}${parseInt(gr)} Kg`;
-    sTPDeux.textContent = result;
-  }, 1000);
-}
-
-//Compteur par pays
-function carbonCountry(qty) {
-  let poid = 0;
-  return setInterval(function () {
-    poid += qty / 10;
-    sTPun.textContent = `${parseInt(poid)} t`;
-  }, 100);
-}
 
 //AFFICHAGE DU TOOLTIP A L'ENDROIT DE LA SOURIS
 map.addEventListener('click', (evt) => {
   // initialisation de la récupération du target
   let cible = evt.target.id;
 
+  // Kill du compteur en cours
+  clearInterval(intervalIdCumulUser);
+  clearInterval(intervalIdCarbonCountry);
   //ACTIVATION DES FONCTIONS COMPTEUR EN FONCTION DU PAYS
   switch (cible) {
     case 'FR':
-      //cumulUser(france.hab);
-      //carbonCountry(france.pays);
+      intervalIdCumulUser = cumulUser(france.hab);
+      intervalIdCarbonCountry = carbonCountry(france.pays);
       break;
 
     case 'US':
-      cumulUser(usa.hab);
-      carbonCountry(usa.pays);
+      intervalIdCumulUser = cumulUser(usa.hab);
+      intervalIdCarbonCountry = carbonCountry(usa.pays);
       break;
 
     default:
-      console.log('not a good country');
+      console.log('Not a good country');
       break;
   }
   let mouseX = evt.clientX + +window.scrollX; //propriété d'un mouseEvent qui donne la coordonée horizontale de la souris par rapport à la fenetre d'affichage (soit le 0,0 de la fenetre du nav)
@@ -134,3 +100,74 @@ map.addEventListener('click', (evt) => {
 //   }, 1000);
 // }
 // getHour();
+
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////FONCTIONS COMPTEUR
+////////////////////////////////////////////////////////////////////////////////////
+
+//Fonction compteur information emission du User
+function cumulUser(qty) {
+  let gr = 0;
+  let dGr = 0;
+  let cGr = 0;
+  let kg = 0;
+
+  return setInterval(function () {
+    gr += qty;
+    if (gr >= 10) {
+      dGr += 1;
+      gr = gr - 10;
+    }
+    if (dGr > 9) {
+      cGr += 1;
+      dGr = 0;
+    }
+    if (cGr > 9) {
+      kg += 1;
+      cGr = 0;
+    }
+    result = `${kg}.${cGr}${dGr}${parseInt(gr)} Kg`;
+    showResultPerson.textContent = result;
+  }, 1000);
+}
+
+//Compteur par pays
+function carbonCountry(qty) {
+  let poid = 0;
+  return setInterval(function () {
+    poid += qty / 10;
+    showResultCountry.textContent = `${parseInt(poid)} t`;
+  }, 100);
+}
+
+function loopFr(qtyCountry, qtyHab) {
+  let gr = 0;
+  let dGr = 0;
+  let cGr = 0;
+  let kg = 0;
+
+  let poid = 0;
+
+  setInterval(function () {
+    poid += qtyCountry / 10;
+    cardResultFrance.textContent = `${parseInt(poid)} t`;
+  }, 100);
+
+  setInterval(function () {
+    gr += qtyHab;
+    if (gr >= 10) {
+      dGr += 1;
+      gr = gr - 10;
+    }
+    if (dGr > 9) {
+      cGr += 1;
+      dGr = 0;
+    }
+    if (cGr > 9) {
+      kg += 1;
+      cGr = 0;
+    }
+    result = `${kg}.${cGr}${dGr}${parseInt(gr)} Kg`;
+    cardResultFrancais.textContent = result;
+  }, 1000);
+}
