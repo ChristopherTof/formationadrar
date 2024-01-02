@@ -63,7 +63,7 @@
 // hasher le password en utisant la méthode md5,
 // Enregistrer le mot de passe hashé (pas la version en clair du formulaire).
 // https://www.php.net/manual/fr/function.md5  -->
-include './connexBdd.php';
+include '../connexBdd.php';
 
 if (isset($_POST['btn_submit'])) {
     if (!empty($_POST['nom']) and !empty($_POST['prenom']) and !empty($_POST['email']) and !empty($_POST['passwrd'])) {
