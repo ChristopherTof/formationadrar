@@ -61,7 +61,7 @@ if (isset($_POST['btn_submit'])) {
     if ($ext === "png" or $ext === "PNG" or $ext === "jpg" or $ext === "JPG") {
         if ($_FILES["image"]["size"] <= 10241024) {
             //code ici
-            move_uploaded_file($_FILES['image']['tmp_name'], './image/' . $_FILES["image"][pouet."name"]);
+            move_uploaded_file($_FILES['image']['tmp_name'], './image/' . $_FILES["image"]["name"]);
         }
     } else {
         echo "Format de fichier incorrect";
