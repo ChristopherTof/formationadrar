@@ -13,6 +13,7 @@ CREATE TABLE users (
     lastname_users VARCHAR(50),
     email_users VARCHAR(50) NOT NULL UNIQUE,
     password_users VARCHAR(100) NOT NULL,
+    image_users VARCHAR(100),
     date_inscription_users DATE,
     is_moderator TINYINT(1) DEFAULT 0
 )Engine=InnoDB;

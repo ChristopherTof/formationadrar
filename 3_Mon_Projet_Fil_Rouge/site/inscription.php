@@ -171,7 +171,7 @@
         if (!empty($_POST['inscripFirstN']) and !empty($_POST['inscripLastN']) and !empty($_POST['inscripMail']) and !empty($_POST['inscripPseudo']) and !empty($_POST['inscripMdp'])){
             addUser($_POST['inscripFirstN'],$_POST['inscripLastN'],$_POST['inscripMail'],$_POST['inscripPseudo'],$_POST['inscripMdp'], $bdd);
 
-            header('Location: ./validateinscription.php');
+            header('location:./validateinscription.php');
         } else {
             echo "Veuillez remplir les champs du formulaire";
         }
