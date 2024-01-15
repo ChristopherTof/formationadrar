@@ -15,6 +15,7 @@ btn.addEventListener('click', () => {
 
   // Initialisation du chemin de l'api
   let ville = `https://api.openweathermap.org/data/2.5/weather?q=${villeInput}&appid=6f88826d767f323ad19cd282444924e9`;
+
   //fonction récupérer la météo
   const meteo = fetch(ville).then(async (response) => {
     //Affichera les information de connexion
