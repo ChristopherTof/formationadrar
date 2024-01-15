@@ -5,6 +5,13 @@ const map = document.querySelector('#worldMap');
 const tooltip = document.querySelector('#tooltip');
 tooltip.setAttribute('class', 'toooltip');
 tooltip.style.display = 'none';
+<<<<<<< HEAD
+=======
+
+const showPays = document.querySelector('#para .pays');
+const showCitoy = document.querySelector('#para2 .citoy');
+
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
 const showResultCountry = document.querySelector('#para .count');
 const showResultPerson = document.querySelector('#para2 .count');
 
@@ -29,6 +36,13 @@ let france = {
   pays: 10.2,
   // Valeur par habitants
   hab: 0.15,
+<<<<<<< HEAD
+=======
+  //nom du pays
+  namePays: "la France",
+
+  citoy : "Français"
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
 };
 
 let usa = {
@@ -36,6 +50,13 @@ let usa = {
   pays: 15,
   // Valeur par habitants
   hab: 5,
+<<<<<<< HEAD
+=======
+   //nom du pays
+  namePays: "les Etats-Unis",
+
+  citoy : "Américains"
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
 };
 
 // Initialisation de la récupération de l'id du setInterval en cours
@@ -57,6 +78,7 @@ map.addEventListener('click', (evt) => {
   //ACTIVATION DES FONCTIONS COMPTEUR EN FONCTION DU PAYS
   switch (cible) {
     case 'FR':
+<<<<<<< HEAD
       intervalIdCumulUser = cumulUser(france.hab);
       intervalIdCarbonCountry = carbonCountry(france.pays);
       break;
@@ -64,6 +86,15 @@ map.addEventListener('click', (evt) => {
     case 'US':
       intervalIdCumulUser = cumulUser(usa.hab);
       intervalIdCarbonCountry = carbonCountry(usa.pays);
+=======
+      intervalIdCumulUser = cumulUser(france.hab, france.citoy);
+      intervalIdCarbonCountry = carbonCountry(france.pays, france.namePays);
+      break;
+
+    case 'US':
+      intervalIdCumulUser = cumulUser(usa.hab, usa.citoy);
+      intervalIdCarbonCountry = carbonCountry(usa.pays, usa.namePays);
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
       break;
 
     default:
@@ -106,11 +137,19 @@ map.addEventListener('click', (evt) => {
 ////////////////////////////////////////////////////////////////////////////////////
 
 //Fonction compteur information emission du User
+<<<<<<< HEAD
 function cumulUser(qty) {
+=======
+function cumulUser(qty, resid) {
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
   let gr = 0;
   let dGr = 0;
   let cGr = 0;
   let kg = 0;
+<<<<<<< HEAD
+=======
+  showCitoy.textContent = resid;
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
 
   return setInterval(function () {
     gr += qty;
@@ -132,14 +171,29 @@ function cumulUser(qty) {
 }
 
 //Compteur par pays
+<<<<<<< HEAD
 function carbonCountry(qty) {
   let poid = 0;
+=======
+function carbonCountry(qty, country) {
+  let poid = 0;
+  showPays.textContent = country;
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
   return setInterval(function () {
     poid += qty / 10;
     showResultCountry.textContent = `${parseInt(poid)} t`;
   }, 100);
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
 function loopFr(qtyCountry, qtyHab) {
   let gr = 0;
   let dGr = 0;

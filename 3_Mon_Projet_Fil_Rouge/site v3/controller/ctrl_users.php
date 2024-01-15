@@ -86,4 +86,10 @@
             die('Erreur : '.$e->getMessage());
         }
     }
+<<<<<<< HEAD
+=======
+
+
+    
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
 ?>

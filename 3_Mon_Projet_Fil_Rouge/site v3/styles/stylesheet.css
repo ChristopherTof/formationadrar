@@ -166,6 +166,13 @@ ul {
   color: #358c83;
 }
 
+<<<<<<< HEAD
+=======
+div .cursor{
+  cursor:crosshair;
+}
+
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
 
 /* //////////////////////////////////////////////////MEDIA QUERIE */
 @media screen and (max-width: 992px) {

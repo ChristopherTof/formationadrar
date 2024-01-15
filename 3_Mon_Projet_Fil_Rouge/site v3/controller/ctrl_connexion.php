@@ -20,13 +20,21 @@ if (isset($_POST["submit"])){
             if(password_verify($logMdp, $mdp)){
                 session_start();
                 $_SESSION["connected"] = true;
+<<<<<<< HEAD
+=======
+                $_SESSION["id"] = $user["id_users"];
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
                 $_SESSION["username"] = $user["username_users"];
                 $_SESSION["firstname"] = $user["firstname_users"];
                 $_SESSION["lastname"] = $user["lastname_users"];
                 $_SESSION["email"] = $user["email_users"];
                 $_SESSION["image"] = $user["image_users"];
                 echo "all is good ".$user["username_users"];
+<<<<<<< HEAD
 
+=======
+                header("Refresh:0; url=../profil.php");
+>>>>>>> 250f4a6019b893a10517250f7d1a6d3cea7fd4d4
                 
             }
             //si le mdp n'est pas bon
