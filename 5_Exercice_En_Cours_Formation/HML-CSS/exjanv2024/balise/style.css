@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(29, 30, 43);
+  color: white;
+}
+
+h2 {
+  margin: 5px;
+}
+
+img {
+  width: 15em;
+}
+.logo {
+  width: 20%;
+  margin-right: auto;
+}
+nav {
+  background-color: rgb(29, 30, 43);
+  min-height: 75px;
+  padding: 0 50px 10px 50px;
+  border-bottom: solid 1px #e9e9e9;
+  font-weight: bold;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  display: inline-block;
+  margin-right: 3vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-out;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(95, 84, 248);
+}
+
+.img_header {
+  background-image: url(./public/moon.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.418);
+  width: 99vw;
+  height: 50vh;
+}
+
+#col-gauche {
+  background-color: rgba(255, 0, 0, 0.26);
+  max-width: 30%;
+  padding: 1%;
+}
+
+#col-droite {
+  background-color: rgba(0, 0, 255, 0.26);
+  text-align: left;
+  width: 65%;
+  padding: 1%;
+}
+
+main {
+  min-height: 75vh;
+}
+
+footer {
+  min-height: 30vh;
+  border-top: solid 1px #e9e9e9;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 50px 10px 50px;
+}

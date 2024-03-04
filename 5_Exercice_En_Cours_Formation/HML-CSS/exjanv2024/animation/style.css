@@ -1,0 +1,85 @@
+h1 {
+  transform: translateX(300px);
+  animation: translation 2s linear;
+}
+
+p {
+  animation: grossi 2s linear;
+}
+
+@keyframes translation {
+  0% {
+    transform: translateX(-150px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes grossi {
+  0% {
+    transform: scale(0%);
+  }
+  50% {
+    transform: scale(50%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+#b1:hover {
+  animation: bat 0.2s infinite alternate;
+}
+
+@keyframes bat {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+#b2:hover {
+  animation: peur 0.2s infinite alternate;
+}
+
+@keyframes peur {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+#b3:hover {
+  animation: love 0.3s infinite alternate;
+}
+
+@keyframes love {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.7);
+  }
+}

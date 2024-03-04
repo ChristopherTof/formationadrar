@@ -33,10 +33,9 @@ CREATE TABLE discuss (
     id_theme INT
 )Engine=InnoDB;
 
-CREATE TABLE valid_info(
-	id_valid INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    name_valid VARCHAR(50),
-    is_valid TINYINT(1) DEFAULT 1
+CREATE TABLE notif(
+	id_notif INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    name_notif VARCHAR(50)
 )Engine=InnoDB;
 
 CREATE TABLE message (
@@ -49,12 +48,6 @@ CREATE TABLE message (
 
 -- Création des tables d'association
 
-CREATE TABLE accept (
-	id_users INT,
-    id_valid INT,
-    PRIMARY KEY (id_users, id_valid)
-)Engine=InnoDB;
-
 CREATE TABLE response (
 	id_users INT,
     id_discuss INT,
@@ -62,7 +55,6 @@ CREATE TABLE response (
     date_response DATETIME,
     PRIMARY KEY (id_users, id_discuss)
 )Engine=InnoDB;
-
 
 -- Création des Foreign key 
 
@@ -73,9 +65,9 @@ CREATE TABLE response (
  REFERENCES users(id_users); 
  
  ALTER TABLE accept 
- ADD CONSTRAINT fk_valid_accept
- FOREIGN KEY (id_valid)
- REFERENCES valid_info(id_valid);
+ ADD CONSTRAINT fk_notif_accept
+ FOREIGN KEY (id_notif)
+ REFERENCES notif(id_notif);
  
 	-- Table response
 
@@ -112,5 +104,9 @@ ALTER TABLE message
 ADD CONSTRAINT fk_sender_message
 FOREIGN KEY (sender)
 REFERENCES users(id_users);
- 
 
+-- Ajout 
+SELECT id_messages, text_messages, date_messages, recipient, read_messages, users.username_users sender, users.email_users 
+FROM messages 
+INNER JOIN users 
+ON messages.sender = users.id_users;

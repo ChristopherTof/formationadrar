@@ -1,0 +1,31 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  scale: 1;
+  transition: background-color, scale 0.5s cubic-bezier(0.51, 0.63, 0.78, 0.04);
+}
+
+div:hover {
+  transition-delay: 2s;
+  scale: 2;
+  background-color: red;
+}
+
+h1 {
+  color: red;
+  transition: color 1s linear;
+}
+
+h1:hover {
+  color: green;
+}
+
+.toto {
+  transition: transform 2s cubic-bezier(0.85, 0.69, 0.09, -0.96);
+}
+
+.toto:active {
+  transform: rotate(360deg);
+  color: red;
+}

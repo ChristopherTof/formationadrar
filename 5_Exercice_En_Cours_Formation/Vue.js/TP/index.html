@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste de Course</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      .toHide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="monApp">
+      <div class="m-3">
+        <h2>La liste des courses 🛍</h2>
+        <!-- Quand on click sur  "Ajouter" on ajoute au tableau listeDesCourses ce que l'utilisateur tape dans l'input  -->
+        <input type="text" class="form-control" v-model="article" />
+        <button class="btn btn-success mt-3" @click="addArticle()">Ajouter à votre Liste de Courses</button>
+        <hr />
+        <h2 v-if="listCourse == ''">Aucune Courses à Faire (on économise ? )</h2>
+        <!-- 2) Ici on affiche la liste de listeDesCourses -->
+        <ul :class="{toHide:hide}" v-else>
+          <li v-for="(items, index) in listCourse" @click="removeItems(index)">{{items}}</li>
+        </ul>
+        <!-- 3) Quand on click sur le bouton ci dessous on affiche ou on maqsque la liste -->
+        <!-- BONUS: Le nom du bouton change 'Masquer' ou 'voir' listes -->
+        <div v-if="listCourse == ''"></div>
+        <div v-else>
+          <button class="btn btn-info mt-3" @click="hideElem()">{{changeMessage}}</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- script pour contacter VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

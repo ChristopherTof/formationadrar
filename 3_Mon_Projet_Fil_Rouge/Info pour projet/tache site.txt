@@ -1,0 +1,67 @@
+
+
+___________________________________________________
+Conception site
+
+Pour le blog :
+
+Regarder la class breadcrumb 
+Regarder la class Pagination (&laquo; et &raquo; flèche gauche et droite)
+
+Voir bouton switch
+
+Check bootstrap LinkedIn 09_07 pour le canvas
+
+
+_____________________________________________________
+02 et 03 Novembre
+
+Retravailler :	Use Case					✔️
+		Diagramme de séquence				✔️
+		Diagramme d'activité				✔️
+
+
+Site : 		Peaufiner les margins smartphone		✔️
+		Redimensionner les images carrousel		✔️
+		Créer le compteur à la seconde			✔️
+		Créer le compte depuis le debut d'année		
+		Interagir avec le svg				✔️
+
+Support oral 	Modifier les éléments
+		Mettre la partie en anglais
+
+
+Chiffre /An
+
+/*
+Canada pays 23.5
+Hab 0.62
+Bresil pays 43.6
+hab  0.2
+Allemagne  24.7
+hab 0.30
+
+Esp  9.7
+hab 0.21
+
+RU 13.3
+hab 0.2
+
+Russie 81.49
+hab 0.57
+
+Arabit Saoudite  24.6
+Hab 0.68
+
+chine  484.1
+han 0.34
+
+Inde 121.6
+hab 0.08
+
+Japon 37.5
+hab 0.30
+
+Océanie 20.5
+hab 0.26
+*/

@@ -1,0 +1,59 @@
+<!--
+    ==============================
+    Soluce bonus capter un event : 
+    ==============================
+    la methods capterInput permet de capter et analyser un event ici l'event "input"
+-->
+<div id="monApp" class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button v-on:click.left="reduire(10)" type="button" class="btn btn-danger">-</button>
+    <h3 class="mx-3">le nombre : {{leNombre}}</h3>
+    <button v-on:click.right="augmenter(20)" type="button" class="btn btn-success">+</button>
+    <form v-on:submit.prevent>
+      <input v-on:input="capterInput($event)" type="text" />
+      <button class="btn btn-primary" type="submit">Envoyer</button>
+    </form>
+    <h3 class="mx-3">{{uneString}}</h3>
+  </div>
+</div>
+
+<div id="monApp" class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button v-on:click.left="reduire(10)" type="button" class="btn btn-danger">-</button>
+    <h3 class="mx-3">le nombre : {{leNombre}}</h3>
+    <button v-on:click.right="augmenter(20)" type="button" class="btn btn-success">+</button>
+    <form v-on:submit.prevent>
+      <input v-on:input="capterInput($event)" type="text" />
+      <button class="btn btn-primary" type="submit">Envoyer</button>
+    </form>
+    <h3 class="mx-3">{{uneString}}</h3>
+    <h1 v-on:click="capterClick($event)">Capter Click</h1>
+  </div>
+</div>
+
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        leNombre: 0,
+        truc: 2,
+        uneString: 'Hello',
+      };
+    },
+    methods: {
+      augmenter(num) {
+        this.leNombre += num;
+      },
+      reduire(num) {
+        this.leNombre -= num;
+      },
+      capterInput(event) {
+        console.log(event);
+        this.uneString = event.target.value;
+      },
+      capterClick(eventClick) {
+        console.log(eventClick);
+      },
+    },
+  }).mount('#monApp');
+</script>
