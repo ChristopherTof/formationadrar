@@ -1,9 +1,7 @@
-
 -- Création de la Base de Donnée
 
-CREATE DATABASE change_ton_climat;
-
-USE change_ton_climat;
+CREATE DATABASE nw_change_ton_climat;
+USE nw_change_ton_climat;
 -- Création des tables 
 
 CREATE TABLE users (
@@ -38,12 +36,22 @@ CREATE TABLE notif(
     name_notif VARCHAR(50)
 )Engine=InnoDB;
 
-CREATE TABLE message (
-	id_message INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    text_message TEXT,
-    date_message DATETIME,
+CREATE TABLE messages (
+	id_messages INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    text_messages TEXT,
+    date_messages DATETIME,
     sender INT,
-    recipient INT
+    recipient INT,
+    read_messages TINYINT(1) DEFAULT 0,
+    idtalk_messages INT,
+    is_hidden_messages TINYINT (1) DEFAULT 0
+)Engine=InnoDB;
+
+CREATE TABLE accept (
+	id_accept INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    id_valid INT,
+    id_users INT,
+    is_ok VARCHAR (50)
 )Engine=InnoDB;
 
 -- Création des tables d'association
@@ -66,7 +74,7 @@ CREATE TABLE response (
  
  ALTER TABLE accept 
  ADD CONSTRAINT fk_notif_accept
- FOREIGN KEY (id_notif)
+ FOREIGN KEY (id_valid)
  REFERENCES notif(id_notif);
  
 	-- Table response
@@ -93,19 +101,19 @@ ADD CONSTRAINT fk_theme_discuss
 FOREIGN KEY (id_theme)
 REFERENCES theme(id_theme);
 
-	-- Table message
+	-- Table messages
     
-ALTER TABLE message 
-ADD CONSTRAINT fk_recipient_message
+ALTER TABLE messages 
+ADD CONSTRAINT fk_recipient_messages
 FOREIGN KEY (recipient)
 REFERENCES users(id_users);
 
-ALTER TABLE message 
-ADD CONSTRAINT fk_sender_message
+ALTER TABLE messages 
+ADD CONSTRAINT fk_sender_messages
 FOREIGN KEY (sender)
 REFERENCES users(id_users);
 
--- Ajout 
+-- Jointure pour récupération du Pseudo de l'expéditeur
 SELECT id_messages, text_messages, date_messages, recipient, read_messages, users.username_users sender, users.email_users 
 FROM messages 
 INNER JOIN users 

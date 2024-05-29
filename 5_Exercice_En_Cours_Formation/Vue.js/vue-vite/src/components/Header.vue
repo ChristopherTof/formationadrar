@@ -30,6 +30,9 @@
         <li class="nav-item">
           <router-link to="/meteo"><a class="me-5 nav-link">Météo</a></router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/correc"><a class="me-5 nav-link">Correction API</a></router-link>
+        </li>
       </ul>
     </div>
   </nav>

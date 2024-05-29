@@ -1,0 +1,8 @@
+const url = window.location.search;
+const params = new URLSearchParams(url);
+
+const msg = params.get('msg');
+
+const discussion = document.querySelector('#discussion');
+
+msg != null ? (discussion.style.display = 'block') : (discussion.style.display = 'none');

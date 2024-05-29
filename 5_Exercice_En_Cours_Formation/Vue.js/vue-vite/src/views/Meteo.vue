@@ -28,8 +28,8 @@ export default defineComponent({
 	},
 	data() {
 		return {
-			meteo: '',
-			meteo2:'',
+			meteo: null,
+			meteo2:null,
 		};
 	},
 	computed: {

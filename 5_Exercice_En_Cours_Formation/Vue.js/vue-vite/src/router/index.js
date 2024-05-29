@@ -36,6 +36,12 @@ const router = createRouter({
       //alias: '/',
       component: () => import('../views/Meteo.vue'),
     },
+    {
+      path: '/correc',
+      name: 'Correction',
+      //alias: '/',
+      component: () => import('../views/Correction.vue'),
+    },
   ],
 });
 
